@@ -18,7 +18,7 @@ import {
 
 } from './styles';
 
-export function Register() {
+export function SignUp() {
   return (
     <Container>
       <ImageBackground 

@@ -13,6 +13,7 @@ import {
   Title,
   Form, 
   FormText,
+  ForgotText,
   LinkText,
   Fields,
   Footer,
@@ -44,8 +45,12 @@ export function Login() {
           />
           <Button title="Entrar"/>
         </Fields>
-        <FormText>Esqueceu a sua senha?</FormText>
-        <LinkText>Clique aqui</LinkText>
+
+        <FormText>
+          <ForgotText>Esqueceu a sua senha?</ForgotText> \n
+          <LinkText>Clique aqui</LinkText>
+        </FormText>
+
       </Form> 
 
       <Footer>

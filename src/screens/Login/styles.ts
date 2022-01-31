@@ -16,6 +16,7 @@ export const Header = styled.View`
   align-items: center;
 
   background-color: ${({ theme }) => theme.colors.primary.light};
+  
 `;
 
 export const Logo = styled.Text`
@@ -40,8 +41,13 @@ export const Form = styled.View`
 
   padding: 32px;
 `; 
-
 export const FormText = styled.Text`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: ${RFValue(16)}px;
+`;
+
+export const ForgotText = styled.Text`
   font-size: ${RFValue(16)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 
