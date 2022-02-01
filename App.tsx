@@ -12,7 +12,7 @@ import {
 } from '@expo-google-fonts/nunito';
 
 import theme from './src/global/styles/theme';
-import { Login } from './src/screens/Login';
+import { Home } from './src/screens/Home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Login />
+      <Home />
     </ThemeProvider>
   )
 }
