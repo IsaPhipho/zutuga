@@ -10,6 +10,8 @@ export const Container = styled.TouchableOpacity.attrs({
   justify-content: space-between;
   align-items: center;
   
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.colors.primary.main};
   border-radius: 10px;
   padding: 18px 32px;
 `;
@@ -23,5 +25,5 @@ export const Category = styled.Text`
 
 export const Icon = styled(Feather)`
   font-size: ${RFValue(20)}px;
-  color: ${({ theme }) => theme.colors.secondary.main};
+  color: ${({ theme }) => theme.colors.primary.main};
 `;

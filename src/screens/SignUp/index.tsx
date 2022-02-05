@@ -1,15 +1,15 @@
 import React from 'react';
-import { ImageBackground } from 'react-native';
+
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { Input } from '../../components/Forms/Input';
 import { Button } from '../../components/Forms/Button';
-
-import tileWallpaper from '../../assets/images/tileWallpaper.png';
 
 import { 
   Container, 
   Logo,
   Header,
+  BorderLine,
   Title,
   Form, 
   Fields,
@@ -21,18 +21,23 @@ import {
 export function SignUp() {
   return (
     <Container>
-      <ImageBackground 
-        source={tileWallpaper} 
-        resizeMode="cover" 
-        style={tileWallpaper}
-      >
-        <Header>
-          <Logo>zutuga</Logo>
-        </Header>
-      </ImageBackground>
-      <Title> 
-        Cadastre a sua conta
-      </Title>
+      <Header>
+        <Logo>zutuga</Logo>
+        <Title> 
+          Cadastre a sua conta
+        </Title>
+      </Header>
+      <BorderLine>
+        <LinearGradient
+          start={{x:0, y:1}}
+          end={{x:1, y:0}}
+          locations={[0.25, 0.45, 0.75]}
+          colors={['#F5EA4E', '#65FC8E', '#F5785A']}
+          style={{
+            flex: 1
+          }}>
+        </LinearGradient>
+      </BorderLine>
 
       <Form>
         <Fields>
@@ -50,7 +55,7 @@ export function SignUp() {
 
       <Footer>
         <FooterText>Já tem conta?</FooterText>
-        <Button title="Entrar na minha conta"/>
+        <Button title="Entrar na conta"/>
       </Footer>  
     </Container>  
   )

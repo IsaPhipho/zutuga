@@ -10,24 +10,28 @@ import {
   Logo,
   Header,
   BorderLine,
+  UserWrapper,
+  UserInfo,
+  Photo,
+  IconEdit,
+  User,
+  UserGreeting,
+  UserName,
   Title,
   Form, 
-  FormText,
-  ForgotText,
-  LinkText,
   Fields,
   Footer,
-  FooterText,
-
+  InputText,
+  InputForm,
 } from './styles';
 
-export function Login() {
+export function Profile() {
   return (
     <Container>
       <Header>
         <Logo>zutuga</Logo>
         <Title> 
-          Entre na conta
+          Meu perfil
         </Title>
       </Header>
       <BorderLine>
@@ -41,24 +45,31 @@ export function Login() {
           }}>
         </LinearGradient>
       </BorderLine>
+      <UserWrapper>
+        <UserInfo>
+          <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
+          /> 
+          <IconEdit name="edit" />
+          <User>
+            <UserGreeting>Olá,</UserGreeting>
+            <UserName>Isa</UserName>
+          </User>
+        </UserInfo>
+      </UserWrapper>
       <Form>
         <Fields>
-          <Input placeholder="Email"
+          <Input placeholder="Ocupação"
           />
-          <Input placeholder="Senha"
+          <Input placeholder="Cidade"
           />
-          <Button title="Entrar"/>
+          <Input placeholder="País"
+          />
         </Fields>
-        <FormText>
-          <ForgotText>Esqueceu a sua senha?{" "}</ForgotText> 
-          <LinkText>{" "}Clique aqui</LinkText>
-        </FormText>
-
       </Form> 
-
       <Footer>
-        <FooterText>Ainda não tem conta?</FooterText>
-        <Button title="Cadastrar a minha conta"/>
+        <InputText>Sobre mim:</InputText>
+        <InputForm />
+        <Button title="Atualizar"/>
       </Footer>  
     </Container>  
   )

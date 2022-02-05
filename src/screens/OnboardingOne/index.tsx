@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { ImageBackground, Image } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Image, /*TouchableOpacity*/ } from 'react-native';
 
-import tileWallpaper from '../../assets/images/tileWallpaper.png';
 import questionOrange from '../../assets/images/questionOrange.png';
-
-// import OnboardingSvg from '../../assets/images/azulejo.svg';
 
 import { 
   Container, 
@@ -15,21 +13,28 @@ import {
   IconQuestion,
   ObOneText,
   Footer,
+  View,
+  FirstCircle,
+  SecondCircle,
   IconNext
 } from './styles';
 
 export function OnboardingOne() {
   return (
     <Container>
-      <ImageBackground 
-        source={tileWallpaper} 
-        resizeMode="cover" 
-        style={tileWallpaper}
-      >
         <Header>
+          <LinearGradient
+            start={{x:0, y:1}}
+            end={{x:1, y:0}}
+            locations={[0.25, 0.45, 0.75]}
+            colors={['#F5EA4E', '#65FC8E', '#F5785A']}
+            style={{
+              flex: 1
+            }}
+          >
           <Logo>zutuga</Logo>
+          </LinearGradient>
         </Header>
-      </ImageBackground>
       <IconQuestion>
         <Image 
           source={questionOrange} 
@@ -38,14 +43,16 @@ export function OnboardingOne() {
       </IconQuestion>
       <Body>
         <ObOneText> 
-          Tire todas as suas dúvidas sobre imigração, veja dicas e indicações...
+          Tire todas as suas dúvidas sobre imigração, veja dicas da comunidade...
         </ObOneText>
       </Body>
-
       <Footer>
+        <View>
+        <FirstCircle />
+        <SecondCircle />
+        </View>
         <IconNext name="arrow-right" />
       </Footer>  
-
     </Container>  
   )
 }

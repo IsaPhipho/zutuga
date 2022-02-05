@@ -12,7 +12,11 @@ import {
 } from '@expo-google-fonts/nunito';
 
 import theme from './src/global/styles/theme';
-import { Home } from './src/screens/Home';
+
+import { NavigationContainer } from '@react-navigation/native';
+
+import { Links } from './src/screens/Links';
+// import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,7 +33,10 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Links />
+      {/* <NavigationContainer> */}
+        {/* <AppRoutes /> */}
+      {/* </NavigationContainer> */}
     </ThemeProvider>
   )
 }

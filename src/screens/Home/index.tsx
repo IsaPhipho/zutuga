@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-native';
 
+import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'react-native';
 
 import { Button } from '../../components/Forms/Button';
@@ -14,6 +15,8 @@ import logo from '../../assets/images/logo.png';
 import { 
   Container, 
   Header,
+  Title,
+  BorderLine,
   UserWrapper,
   UserInfo,
   Photo,
@@ -56,17 +59,31 @@ export function Home() {
           style={logo}
         >
         </Image>
-        <UserWrapper>
-          <UserInfo>
-            <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
-            />
-            <User>
-              <UserGreeting>Olá,</UserGreeting>
-              <UserName>Isa</UserName>
-            </User>
-          </UserInfo>
-        </UserWrapper>  
+        <Title> 
+          Categorias
+        </Title>
       </Header>
+      <BorderLine>
+        <LinearGradient
+          start={{x:0, y:1}}
+          end={{x:1, y:0}}
+          locations={[0.25, 0.45, 0.75]}
+          colors={['#F5EA4E', '#65FC8E', '#F5785A']}
+          style={{
+            flex: 1
+          }}>
+        </LinearGradient>
+      </BorderLine>
+      <UserWrapper>
+        <UserInfo>
+          <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
+          />
+          <User>
+            <UserGreeting>Olá,</UserGreeting>
+            <UserName>Isa</UserName>
+          </User>
+        </UserInfo>
+      </UserWrapper>
       
       <Body>
         

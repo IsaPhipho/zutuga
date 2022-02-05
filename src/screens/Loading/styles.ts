@@ -6,4 +6,7 @@ export const Title = styled.Text`
 
   font-size: ${RFValue(56)}px;
   font-family: ${({ theme }) => theme.fonts.black};
+
+  justify-content: center;
+  align-items: center;
 `;

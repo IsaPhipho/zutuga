@@ -4,35 +4,39 @@ import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.primary.main};
+  background-color: ${({ theme }) => theme.colors.shape};
 `;
 
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(8)}px; 
+  height: ${RFPercentage(21)}px; 
   margin-top: ${RFPercentage(4)}px;
 
   justify-content: center;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.colors.primary.light};
+  background-color: ${({ theme }) => theme.colors.primary.main};
+  
 `;
 
 export const Logo = styled.Text`
   font-size: ${RFValue(32)}px;
   font-family: ${({ theme }) => theme.fonts.black};
 
-  color: ${({ theme }) => theme.colors.primary.main};
+  color: ${({ theme }) => theme.colors.attention};
 `;
 
 export const Title = styled.Text`
-  font-size: ${RFValue(16)}px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${RFValue(24)}px;
+  font-family: ${({ theme }) => theme.fonts.bold};
 
   color: ${({ theme }) => theme.colors.shape};
 
-  margin-left: 32px;
   margin-top: ${RFValue(32)}px;
+`;
+
+export const BorderLine = styled.View`
+  height: 2px;
 `;
 
 export const Form = styled.View`
@@ -40,6 +44,7 @@ export const Form = styled.View`
 
   padding: 32px;
 `; 
+
 export const Fields = styled.View``;
 
 export const Footer = styled.View`
@@ -52,9 +57,9 @@ export const FooterText = styled.Text`
   font-size: ${RFValue(16)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 
-  color: ${({ theme }) => theme.colors.shape};
+  color: ${({ theme }) => theme.colors.primary.main};
 
-  margin-bottom: ${RFValue(16)}px;
+  margin-bottom: ${RFValue(8)}px;
 
 `;
 

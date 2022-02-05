@@ -2,8 +2,8 @@ export default {
   colors: {
     primary: {
       main: '#06316B',
-      light: '#F1F5FC',
-      dark: '#455684',
+      light: '#455468',
+      dark: '#00204C',
     },
 
     secondary: {
@@ -17,8 +17,9 @@ export default {
 
     alertColor: '#FF5A5A',
 
-    shape: '#ffffff',
-    background: '#000000',
+    shape: '#E6EBF0',
+
+    text: '#F3F8FF'
 
   },
 

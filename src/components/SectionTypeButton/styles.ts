@@ -21,10 +21,12 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
   align-items: center;
   justify-content: center;
 
-  background-color: ${({ theme }) => theme.colors.shape};
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.colors.primary.main};
   border-radius: 10px;
+  
 
-  padding: 16px; 
+  padding: 24px; 
 
   ${({ isActive, type }) => isActive && type === 'question' && css`
     background-color: ${({ theme }) => theme.colors.secondary.light};
