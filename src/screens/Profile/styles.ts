@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { TextInput } from "react-native";
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
 
@@ -106,17 +105,4 @@ export const InputText = styled.Text`
   color: ${({ theme }) => theme.colors.primary.main};
 
   margin-bottom: ${RFValue(8)}px;
-`;
-
-export const InputForm = styled(TextInput)`
-  width: 100%;
-  padding: 48px 56px;
-
-  font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(14)}px;
-
-  color: ${({ theme }) => theme.colors.primary.main};
-  background-color: ${({ theme }) => theme.colors.shape};
-  border: 1px solid;
-  border-radius: 10px;
 `;

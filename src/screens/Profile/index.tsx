@@ -3,6 +3,7 @@ import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { Input } from '../../components/Forms/Input';
+import { InputMessage } from '../../components/Forms/InputMessage';
 import { Button } from '../../components/Forms/Button';
 
 import { 
@@ -21,8 +22,7 @@ import {
   Form, 
   Fields,
   Footer,
-  InputText,
-  InputForm,
+  InputText
 } from './styles';
 
 export function Profile() {
@@ -68,7 +68,7 @@ export function Profile() {
       </Form> 
       <Footer>
         <InputText>Sobre mim:</InputText>
-        <InputForm />
+        <InputMessage placeholder="Digite aqui"/>
         <Button title="Atualizar"/>
       </Footer>  
     </Container>  

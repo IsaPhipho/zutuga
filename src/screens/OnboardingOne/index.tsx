@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image, /*TouchableOpacity*/ } from 'react-native';
+import { Image } from 'react-native';
 
 import questionOrange from '../../assets/images/questionOrange.png';
 
@@ -16,6 +16,7 @@ import {
   View,
   FirstCircle,
   SecondCircle,
+  NextButton,
   IconNext
 } from './styles';
 
@@ -51,7 +52,9 @@ export function OnboardingOne() {
         <FirstCircle />
         <SecondCircle />
         </View>
-        <IconNext name="arrow-right" />
+        <NextButton onPress={() => {}}>
+          <IconNext name="arrow-right" />
+        </NextButton>
       </Footer>  
     </Container>  
   )

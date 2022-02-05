@@ -1,18 +1,17 @@
-import styled, { css } from 'styled-components/native'; 
+import styled from 'styled-components/native'; 
 import { TouchableOpacity } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 
 export const Container = styled(TouchableOpacity)`
-  width: 48%;
-  background-color: ${({ theme }) => theme.colors.shape};
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.secondary.light};
 
-  padding: 24px;
-
-  border: 1px solid;
   border-radius: 10px;
   align-items: center;
   margin-top: 12px;
+  margin-bottom: 16px;
+  padding: 18px;
 
   flex-direction: row;
   justify-content: center;

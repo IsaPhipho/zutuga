@@ -3,7 +3,7 @@ import { Linking } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { ButtonLink } from '../../components/Forms/ButtonLink';
+import { ButtonLink } from '../../components/ButtonLink';
 
 import { 
   Container, 

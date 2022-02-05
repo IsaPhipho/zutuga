@@ -68,32 +68,32 @@ export function AppRoutes(){
           )
         }}
       />
-    <Screen
-      name="Notification"
-      component={OnboardingOne}  // alterar Home para Notifications
-      options={{
-        tabBarIcon: (({ size, color }) => 
-          <Feather
-            name="bell"
-            size={size}
-            color={color}
-          /> 
-        )
-      }}  
-    />
-    <Screen
-      name="Profile"
-      component={Profile} 
-      options={{
-        tabBarIcon: (({ size, color }) => 
-          <Feather
-            name="user"
-            size={size}
-            color={color}
-          /> 
-        )
-      }}
-    />
-  </Navigator>
+      <Screen
+        name="Notification"
+        component={OnboardingOne}  // alterar Home para Notifications
+        options={{
+          tabBarIcon: (({ size, color }) => 
+            <Feather
+              name="bell"
+              size={size}
+              color={color}
+            /> 
+          )
+        }}  
+      />
+      <Screen
+        name="Profile"
+        component={Profile} 
+        options={{
+          tabBarIcon: (({ size, color }) => 
+            <Feather
+              name="user"
+              size={size}
+              color={color}
+            /> 
+          )
+        }}
+      />
+    </Navigator>
   )
 }
