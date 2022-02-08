@@ -10,9 +10,8 @@ export const Container = styled(TextInput)`
   font-size: ${RFValue(14)}px;
 
   color: ${({ theme }) => theme.colors.primary.main};
-  background-color: ${({ theme }) => theme.colors.shape};
-  border: 1px solid;
-  border-radius: 10px;
+  background-color: ${({ theme }) => theme.colors.text};
+  border-radius: 5px;
 
   margin-bottom: 8px;
 `;

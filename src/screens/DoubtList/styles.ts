@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-// import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
   flex: 1;
@@ -38,11 +37,4 @@ export const Title = styled.Text`
 
 export const BorderLine = styled.View`
   height: 2px;
-`;
-
-export const Body = styled.ScrollView`
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 16px;
-  margin-bottom: 16px;
 `;

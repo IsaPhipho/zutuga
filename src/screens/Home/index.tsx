@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { Modal } from 'react-native';
+import { Modal, Alert } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image } from 'react-native';
+
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
 
 import { Button } from '../../components/Forms/Button';
 import { SectionTypeButton } from '../../components/SectionTypeButton';
@@ -10,24 +15,18 @@ import { CategorySelectButton } from '../../components/CategorySelectButton';
 
 import { CategorySelect } from '../CategorySelect';
 
-import logo from '../../assets/images/logo.png';
-
 import { 
   Container, 
   Header,
+  Logo,
   Title,
   BorderLine,
-  UserWrapper,
-  UserInfo,
-  Photo,
-  User,
-  UserGreeting,
-  UserName,
   Body,
   BodyText,
   Footer,
   FooterText,
-  SectionType
+  FirstSectionType,
+  SecondSectionType
 } from './styles';
 
 export function Home() {
@@ -38,7 +37,9 @@ export function Home() {
     name:'Categoria'
   });
 
-  function handleSectionTypeSelect(type: 'question' | 'tip') {
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+
+  function handleSectionTypeSelect(type: 'question' | 'tip' | 'listQuestion' | 'listTip') {
     setSectionType(type);
   }
   
@@ -50,18 +51,40 @@ export function Home() {
     setCategoryModalOpen(false);
   }
 
+  async function handleSelectSection() {
+    if(!sectionType) {
+      return Alert.alert('Por favor, informe o que deseja fazer.');
+    }
+
+    if(category.key === 'category') {
+      return Alert.alert('Selecione a categoria');
+    }
+
+    
+    if(category.key !== 'category' && sectionType === 'listQuestion') {
+      navigate('DoubtList')
+    }
+
+    if(category.key !== 'category' && sectionType === 'listTip') {
+      navigate('TipList')
+    } 
+
+    if(category.key !== 'category' && sectionType === 'question') {
+      navigate('SendDoubt')
+    } 
+
+    if(category.key !== 'category' && sectionType === 'tip') {
+      navigate('SendTip')
+    }
+    
+  }
+
+
   return (
     <Container>
       <Header>
-        <Image
-          source={logo} 
-          resizeMode="cover" 
-          style={logo}
-        >
-        </Image>
-        <Title> 
-          Categorias
-        </Title>
+        <Logo>zutuga</Logo>
+        <Title>Categorias</Title>
       </Header>
       <BorderLine>
         <LinearGradient
@@ -74,19 +97,7 @@ export function Home() {
           }}>
         </LinearGradient>
       </BorderLine>
-      <UserWrapper>
-        <UserInfo>
-          <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
-          />
-          <User>
-            <UserGreeting>Olá,</UserGreeting>
-            <UserName>Isa</UserName>
-          </User>
-        </UserInfo>
-      </UserWrapper>
-      
       <Body>
-        
         <BodyText>Escolha a categoria:</BodyText>
         <CategorySelectButton 
             title={category.name}
@@ -95,22 +106,39 @@ export function Home() {
       </Body>
       
       <Footer>
-        <FooterText>Escolha a seção:</FooterText>
-        <SectionType>
+        <FooterText>O que você deseja fazer?</FooterText>
+          <FirstSectionType>
+            <SectionTypeButton 
+              type="listQuestion"
+              title="Listar dúvidas"
+              onPress={() => handleSectionTypeSelect('listQuestion')}
+              isActive={sectionType === 'listQuestion'}
+            />
             <SectionTypeButton 
               type="question"
-              title="Dúvidas"
+              title="Enviar dúvida"
               onPress={() => handleSectionTypeSelect('question')}
               isActive={sectionType === 'question'}
             />
-            <SectionTypeButton 
-              type="tip"
-              title="Dicas"
-              onPress={() => handleSectionTypeSelect('tip')}
-              isActive={sectionType === 'tip'}
-            />
-          </SectionType>
-        <Button title="Listar"/>
+          </FirstSectionType>
+          <SecondSectionType>
+              <SectionTypeButton 
+                type="listTip"
+                title="Listar dicas"
+                onPress={() => handleSectionTypeSelect('listTip')}
+                isActive={sectionType === 'listTip'}
+              />
+              <SectionTypeButton 
+                type="tip"
+                title="Enviar dica"
+                onPress={() => handleSectionTypeSelect('tip')}
+                isActive={sectionType === 'tip'}
+              />
+            </SecondSectionType>
+        <Button 
+          title="Confirmar"
+          onPress={handleSelectSection}
+        />
       </Footer>  
       <Modal visible={categoryModalOpen}>
         <CategorySelect

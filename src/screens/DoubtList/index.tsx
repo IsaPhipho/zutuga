@@ -10,13 +10,13 @@ import {
   BorderLine
 } from './styles';
 
-export function SendTip() {
+export function DoubtList() {
   return (
     <Container>
       <Header>
         <Logo>zutuga</Logo>
         <Title> 
-          Envie sua dica
+          Dúvidas
         </Title>
       </Header>
       <BorderLine>
@@ -32,4 +32,4 @@ export function SendTip() {
       </BorderLine>
     </Container> 
   )
-}   
+}    

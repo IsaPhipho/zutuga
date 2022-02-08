@@ -1,6 +1,11 @@
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
 import React from 'react';
+import { StatusBar } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
+
+import theme from './src/global/styles/theme';
 
 import {
   useFonts,
@@ -11,12 +16,24 @@ import {
   Nunito_900Black
 } from '@expo-google-fonts/nunito';
 
-import theme from './src/global/styles/theme';
+import { NavigationContainer } from '@react-navigation/native';
 
-// import { NavigationContainer } from '@react-navigation/native';
+// import { OnboardingOne } from './src/screens/OnboardingOne';
+// import { OnboardingTwo } from './src/screens/OnboardingTwo';
+// import { Login } from './src/screens/Login';
+// import { SignUp } from './src/screens/SignUp';
 
-import { SendTip } from './src/screens/SendTip';
-// import { AppRoutes } from './src/routes/app.routes';
+// import { Profile } from './src/screens/Profile';
+// import { Home} from './src/screens/Home';
+
+// import { DoubtList} from './src/screens/DoubtList';
+// import { SendDoubt } from './src/screens/SendDoubt';
+
+// import { SendTip } from './src/screens/SendTip';
+
+// import { Links } from './src/screens/Links';
+
+import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,11 +49,18 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <SendTip />
-      {/* <NavigationContainer> */}
-        {/* <AppRoutes /> */}
-      {/* </NavigationContainer> */}
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1}}>
+      <ThemeProvider theme={theme}>
+        <StatusBar 
+            barStyle="light-content"
+            backgroundColor="transparent"
+            translucent
+        />
+        {/* <DoubtList /> */}
+        <NavigationContainer>
+          <AppRoutes />
+        </NavigationContainer>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   )
 }

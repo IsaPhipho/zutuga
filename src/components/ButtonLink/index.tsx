@@ -8,7 +8,7 @@ interface Props extends TouchableOpacityProps {
 }
 
 export function ButtonLink({ 
-  title, 
+  title,
   ...rest 
 }: Props) {
   return (

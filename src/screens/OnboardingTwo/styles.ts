@@ -8,14 +8,9 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.primary.dark};
 `;
 
-export const tileWallpaper = styled.View``;
-
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(10)}px; 
-  margin-top: ${RFPercentage(16)}px;
-
-  background-color: ${({ theme }) => theme.colors.primary.light};
+  height: ${RFPercentage(24)}px;
 `;
 
 export const Logo = styled.Text`
@@ -24,7 +19,8 @@ export const Logo = styled.Text`
 
   color: ${({ theme }) => theme.colors.primary.main};
 
-  margin-left: 32px;
+  margin-top: ${RFPercentage(8)}px;
+  text-align: center;
 `;
 
 export const IconCommunity = styled.View`

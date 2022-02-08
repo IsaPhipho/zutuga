@@ -6,6 +6,8 @@ export const Container = styled(TextInput)`
   width: 100%;
   padding: 58px 56px;
 
+  margin-bottom: 16px;
+
   align-items: center;
 
   font-family: ${({ theme }) => theme.fonts.regular};
@@ -14,7 +16,6 @@ export const Container = styled(TextInput)`
   color: ${({ theme }) => theme.colors.primary.main};
   background-color: ${({ theme }) => theme.colors.text};
   
-  border: 1px solid;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: ${({ theme }) => theme.colors.primary.main};
 `;

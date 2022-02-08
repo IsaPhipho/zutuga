@@ -1,6 +1,5 @@
 import React from 'react'; 
 import { TouchableOpacityProps } from 'react-native';
-//import { RectButtonProps } from 'react-native-gesture-handler';
 
 import { 
   Container, 
@@ -9,12 +8,14 @@ import {
 } from './styles';
 
 const icons = {
-  question: 'help-circle',
-  tip: 'message-circle',
+  question: 'comment-question-outline',
+  listQuestion: 'comment-text-multiple',
+  tip: 'lightbulb-outline',
+  listTip: 'lightbulb-multiple-outline'
 }
 
 interface Props extends TouchableOpacityProps {
-  type: 'question' | 'tip';
+  type: 'question' | 'tip' | 'listQuestion' | 'listTip';
   title: string;
   isActive: boolean;
 }

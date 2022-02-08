@@ -10,7 +10,6 @@ export const Container = styled.View`
 export const Header = styled.View`
   width: 100%;
   height: ${RFPercentage(21)}px; 
-  margin-top: ${RFPercentage(4)}px;
 
   justify-content: center;
   align-items: center;
@@ -24,15 +23,17 @@ export const Logo = styled.Text`
   font-family: ${({ theme }) => theme.fonts.black};
 
   color: ${({ theme }) => theme.colors.attention};
+
+  margin-top: ${RFPercentage(4)}px;
 `;
 
 export const Title = styled.Text`
-  font-size: ${RFValue(24)}px;
+  font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
 
   color: ${({ theme }) => theme.colors.shape};
 
-  margin-top: ${RFValue(32)}px;
+  margin-top: ${RFValue(16)}px;
 `;
 
 export const BorderLine = styled.View`
@@ -45,11 +46,13 @@ export const UserWrapper = styled.View`
   margin-right: 32px;
 
   flex-direction: row;
+  justify-content: center;
 `;
 
-export const UserInfo = styled.View`
-  flex-direction: row;
-`;
+// export const UserInfo = styled.View`
+//   flex-direction: row;
+  
+// `;
 
 export const Photo = styled.Image`
   width: ${RFValue(48)}px;
@@ -64,7 +67,7 @@ export const IconEdit = styled(Feather)`
 `; 
 
 export const User = styled.View`
-  margin-left: 24px;
+  background-color: ${({ theme }) => theme.colors.alertColor};
 `; 
 
 export const UserGreeting = styled.Text`
@@ -83,6 +86,8 @@ export const UserName = styled.Text`
   margin-right: 32px;
 `;
 
+export const Content = styled.ScrollView``;
+
 export const Form = styled.View`
   margin-top: ${RFValue(16)}px;
   margin-bottom: ${RFValue(16)}px;
@@ -96,6 +101,7 @@ export const Fields = styled.View`
 export const Footer = styled.View`
   margin-left: 32px;
   margin-right: 32px;
+  margin-bottom: ${RFValue(24)}px;
 `;
 
 export const InputText = styled.Text`
@@ -104,5 +110,5 @@ export const InputText = styled.Text`
 
   color: ${({ theme }) => theme.colors.primary.main};
 
-  margin-bottom: ${RFValue(8)}px;
+  margin-bottom: ${RFValue(16)}px;
 `;

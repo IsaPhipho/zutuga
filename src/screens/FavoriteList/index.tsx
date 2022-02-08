@@ -10,13 +10,13 @@ import {
   BorderLine
 } from './styles';
 
-export function SendTip() {
+export function FavoriteList() {
   return (
     <Container>
       <Header>
         <Logo>zutuga</Logo>
         <Title> 
-          Envie sua dica
+          Favoritos
         </Title>
       </Header>
       <BorderLine>

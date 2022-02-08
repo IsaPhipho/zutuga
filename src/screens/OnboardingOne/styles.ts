@@ -10,10 +10,7 @@ export const Container = styled.View`
 
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(10)}px; 
-  margin-top: ${RFPercentage(16)}px;
-
-  background-color: ${({ theme }) => theme.colors.primary.light};
+  height: ${RFPercentage(24)}px; 
 `;
 
 export const Logo = styled.Text`
@@ -22,7 +19,8 @@ export const Logo = styled.Text`
 
   color: ${({ theme }) => theme.colors.primary.main};
 
-  margin-left: 32px;
+  margin-top: ${RFPercentage(8)}px;
+  text-align: center;
 `;
 
 export const IconQuestion = styled.View`
@@ -63,8 +61,8 @@ export const View = styled.View`
 
 export const FirstCircle = styled.View`
   background-color: ${({ theme }) => theme.colors.secondary.main};
-  width: 5;
-  height: 5;
+  width: 5px;
+  height: 5px;
   border-radius: 2px;
 `;
 

@@ -3,6 +3,8 @@ import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import questionOrange from '../../assets/images/questionOrange.png';
 
 import { 
@@ -21,6 +23,7 @@ import {
 } from './styles';
 
 export function OnboardingOne() {
+
   return (
     <Container>
         <Header>

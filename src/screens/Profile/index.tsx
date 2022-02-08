@@ -6,19 +6,18 @@ import { Input } from '../../components/Forms/Input';
 import { InputMessage } from '../../components/Forms/InputMessage';
 import { Button } from '../../components/Forms/Button';
 
+import { Home } from '../Home';
+
 import { 
   Container, 
   Logo,
   Header,
   BorderLine,
   UserWrapper,
-  UserInfo,
   Photo,
   IconEdit,
-  User,
-  UserGreeting,
-  UserName,
   Title,
+  Content,
   Form, 
   Fields,
   Footer,
@@ -26,12 +25,13 @@ import {
 } from './styles';
 
 export function Profile() {
+
   return (
     <Container>
       <Header>
         <Logo>zutuga</Logo>
         <Title> 
-          Meu perfil
+          Olá, Isa!
         </Title>
       </Header>
       <BorderLine>
@@ -46,31 +46,27 @@ export function Profile() {
         </LinearGradient>
       </BorderLine>
       <UserWrapper>
-        <UserInfo>
-          <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
-          /> 
-          <IconEdit name="edit" />
-          <User>
-            <UserGreeting>Olá,</UserGreeting>
-            <UserName>Isa</UserName>
-          </User>
-        </UserInfo>
+        <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
+        /> 
+        <IconEdit name="edit" />
       </UserWrapper>
-      <Form>
-        <Fields>
-          <Input placeholder="Ocupação"
-          />
-          <Input placeholder="Cidade"
-          />
-          <Input placeholder="País"
-          />
-        </Fields>
-      </Form> 
-      <Footer>
-        <InputText>Sobre mim:</InputText>
-        <InputMessage placeholder="Digite aqui"/>
-        <Button title="Atualizar"/>
-      </Footer>  
+      <Content>
+        <Form>
+          <Fields>
+            <Input placeholder="Ocupação"
+            />
+            <Input placeholder="Cidade"
+            />
+            <Input placeholder="País"
+            />
+          </Fields>
+        </Form> 
+        <Footer>
+          <InputText>Sobre mim:</InputText>
+          <InputMessage placeholder="Digite aqui"/>
+          <Button title="Atualizar"/>
+        </Footer> 
+      </Content> 
     </Container>  
   )
 }

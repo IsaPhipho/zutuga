@@ -10,13 +10,13 @@ import {
   BorderLine
 } from './styles';
 
-export function SendTip() {
+export function TipList() {
   return (
     <Container>
       <Header>
         <Logo>zutuga</Logo>
         <Title> 
-          Envie sua dica
+          Dicas
         </Title>
       </Header>
       <BorderLine>

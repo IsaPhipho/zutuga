@@ -1,23 +1,66 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useTheme} from 'styled-components/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Feather } from '@expo/vector-icons';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const { Navigator, Screen } = createBottomTabNavigator();
+// const { Navigator, Screen } = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 import { Home } from '../screens/Home';
-import { OnboardingOne } from '../screens/OnboardingOne';
-import { Profile } from '../screens/Profile';
-import { Links } from '../screens/Links';
-// import { Notifications } from '../screens/Notifications';
+import { DoubtList } from '../screens/DoubtList';
+import { TipList } from '../screens/TipList';
+import { SendDoubt } from '../screens/SendDoubt';
+import { SendTip } from '../screens/SendTip';
 
-export function AppRoutes(){
+import { Links } from '../screens/Links';
+import { Profile } from '../screens/Profile';
+import { FavoriteList } from '../screens/FavoriteList';
+
+function StackNav() {
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+          name="DoubtList"
+          component={DoubtList}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SendDoubt"
+          component={SendDoubt}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="TipList"
+          component={TipList}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SendTip"
+          component={SendTip}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export function AppRoutes() {
   const theme = useTheme();
   return (
-    <Navigator
+    <Tab.Navigator
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: theme.colors.shape,
@@ -27,7 +70,7 @@ export function AppRoutes(){
           height: 80,
           backgroundColor: theme.colors.primary.dark,
           borderTopColor: theme.colors.primary.dark,
-          paddingTop: 4,
+          paddingTop: 16,
         },
         headerTitleStyle: { color: "white" },
         tabBarBackground: () => (
@@ -42,58 +85,58 @@ export function AppRoutes(){
           ),
       }}
     >
-      <Screen
-        name="Home"
-        component={Home}
+      <Tab.Screen
+        name="StackNav"
+        component={StackNav}
         options={{
-          tabBarIcon: (({ size, color }) => 
-            <Feather
-              name="home"
-              size={size}
+          tabBarIcon: (({ color }) => 
+            <MaterialCommunityIcons
+              name="home-circle"
+              size={32}
               color={color}
             /> 
           )
         }}  
       />
-      <Screen
+      <Tab.Screen
         name="Link"
         component={Links}
         options={{
-          tabBarIcon: (({ size, color }) => 
-            <Feather
-              name="link"
-              size={size}
+          tabBarIcon: (({ color }) => 
+            <Ionicons
+              name="navigate-circle-sharp"
+              size={32}
               color={color}
             /> 
           )
         }}
       />
-      <Screen
-        name="Notification"
-        component={OnboardingOne}  // alterar Home para Notifications
+      <Tab.Screen
+        name="Favorites"
+        component={FavoriteList}
         options={{
-          tabBarIcon: (({ size, color }) => 
-            <Feather
-              name="bell"
-              size={size}
+          tabBarIcon: (({ color }) => 
+            <MaterialCommunityIcons
+              name="heart-circle"
+              size={32}
               color={color}
             /> 
           )
         }}  
       />
-      <Screen
+      <Tab.Screen
         name="Profile"
         component={Profile} 
         options={{
-          tabBarIcon: (({ size, color }) => 
-            <Feather
-              name="user"
-              size={size}
+          tabBarIcon: (({ color }) => 
+            <Ionicons
+              name="person-circle-sharp"
+              size={32}
               color={color}
             /> 
           )
         }}
       />
-    </Navigator>
-  )
+    </Tab.Navigator>
+  );
 }
