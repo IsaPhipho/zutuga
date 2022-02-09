@@ -20,23 +20,6 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { AuthProvider } from './src/contexts/auth';
 
-// import { OnboardingOne } from './src/screens/OnboardingOne';
-// import { OnboardingTwo } from './src/screens/OnboardingTwo';
-// import { Login } from './src/screens/Login';
-// import { SignUp } from './src/screens/SignUp';
-
-// import { Profile } from './src/screens/Profile';
-// import { Home} from './src/screens/Home';
-
-// import { DoubtList} from './src/screens/DoubtList';
-// import { SendDoubt } from './src/screens/SendDoubt';
-
-// import { SendTip } from './src/screens/SendTip';
-
-// import { Links } from './src/screens/Links';
-
-// import { AppRoutes } from './src/routes/app.routes';
-
 import Routes from './src/routes';
 
 export default function App() {
@@ -60,9 +43,7 @@ export default function App() {
             backgroundColor="transparent"
             translucent
         />
-        {/* <DoubtList /> */}
         <NavigationContainer>
-          {/* <AppRoutes /> */}
           <AuthProvider>
             <Routes />
           </AuthProvider>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Modal } from 'react-native';
+import { Modal, TouchableOpacity } from 'react-native';
 
 import { Logo } from '../../components/Logo';
 
@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { CategorySelect } from '../CategorySelect';
 import { CategorySelectButton } from '../../components/CategorySelectButton';
-// import { ListCard } from "../../components/ListCard";
+import { DetailDoubt } from '../DetailDoubt';
 
 import { 
   Container, 
@@ -33,6 +33,7 @@ import {
 } from './styles';
 
 export function DoubtList() {
+  const [doubtModalOpen, setDoubtModalOpen] = useState(true);
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
   const [category, setCategory] = useState({
     key: 'category',
@@ -45,6 +46,14 @@ export function DoubtList() {
 
   function handleCloseSelectCategoryModal() {
     setCategoryModalOpen(false);
+  }
+
+  function handleOpenDetailDoubtModal() {
+    setDoubtModalOpen(true);
+  }
+
+  function handleCloseDetailDoubtModal() {
+    setDoubtModalOpen(false);
   }
 
   return (
@@ -81,6 +90,12 @@ export function DoubtList() {
         />
       </Modal>
 
+      <Modal visible={doubtModalOpen}>
+        <DetailDoubt
+          closeDetailDoubt={handleCloseDetailDoubtModal}
+        />
+      </Modal>
+
       <Content>
         <Card>
           <UserWrapper>
@@ -98,9 +113,11 @@ export function DoubtList() {
               Meu título venceu e o SEF {'\n'}
               não atende a chamada. Como... 
             </Text>
+            <TouchableOpacity onPress={handleOpenDetailDoubtModal}>
             <TextMore>
               leia mais
             </TextMore>
+            </TouchableOpacity>
           </Footer>
         </Card>
 

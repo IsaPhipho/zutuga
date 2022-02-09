@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-// import { TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
