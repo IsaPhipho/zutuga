@@ -1,9 +1,13 @@
 import React from 'react';
 
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image } from 'react-native';
+import { Image, TouchableOpacity  } from 'react-native';
 
-import { useNavigation } from '@react-navigation/native';
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
 
 import questionOrange from '../../assets/images/questionOrange.png';
 
@@ -18,11 +22,14 @@ import {
   View,
   FirstCircle,
   SecondCircle,
-  NextButton,
   IconNext
 } from './styles';
 
 export function OnboardingOne() {
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+  function handleNavigateToNextPage() {
+    navigate('OnboardingTwo');
+  }
 
   return (
     <Container>
@@ -55,9 +62,9 @@ export function OnboardingOne() {
         <FirstCircle />
         <SecondCircle />
         </View>
-        <NextButton onPress={() => {}}>
+        <TouchableOpacity  onPress={() => handleNavigateToNextPage()}>
           <IconNext name="arrow-right" />
-        </NextButton>
+        </TouchableOpacity >
       </Footer>  
     </Container>  
   )

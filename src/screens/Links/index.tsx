@@ -1,13 +1,14 @@
 import React from 'react';
 import { Linking } from 'react-native';
 
+import { Logo } from '../../components/Logo';
+
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { ButtonLink } from '../../components/ButtonLink';
 
 import { 
   Container, 
-  Logo,
   Title,
   Header,
   BorderLine,
@@ -18,7 +19,7 @@ export function Links() {
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title> 
           Links úteis
         </Title>

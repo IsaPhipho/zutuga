@@ -2,19 +2,35 @@ import React from 'react';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { Logo } from '../../components/Logo';
+
 import { 
-  Container, 
-  Logo,
+  Container,
   Title,
   Header,
-  BorderLine
+  BorderLine,
+  DoubtText,
+  TipText,
+  Card02,
+  Card03,
+  CardView,
+  UserWrapper,
+  UserInfo,
+  UserPhoto,
+  TipTitle,
+  UserRole,
+  UserLocal,
+  Footer,
+  Text,
+  TextMore,
+  Icon,
 } from './styles';
 
 export function FavoriteList() {
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title> 
           Favoritos
         </Title>
@@ -30,6 +46,65 @@ export function FavoriteList() {
           }}>
         </LinearGradient>
       </BorderLine>
+      <DoubtText>Dúvidas</DoubtText>
+      <Card03>
+          <UserWrapper>
+            <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60' }}/>
+            <UserInfo>
+              <TipTitle>Estudos</TipTitle>
+              <UserRole>Tayla Soares  |  Estudante</UserRole>
+              <UserLocal>Salvador, Brasil</UserLocal>
+            </UserInfo>
+            <Icon name={'bell-off-outline'} />
+            <Icon name={'heart'} />
+          </UserWrapper>
+          <Footer>
+            <Text>
+              Tenho interesse em realizar{'\n'}
+              curso de Mestrado em Portugal... 
+            </Text>  
+            <TextMore>
+            leia mais
+            </TextMore> 
+          </Footer>
+        </Card03>
+        <TipText>Dicas</TipText>
+        <CardView>
+          <Card02>
+            <UserWrapper>
+              <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1613188665424-b6790816c9f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnJhemlsaWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60' }}/>
+              <UserInfo>
+                <TipTitle>Queijo coalho</TipTitle>
+                <UserRole>Rodolfo Araújo  |  Estudante</UserRole>
+                <UserLocal>Braga, Portugal</UserLocal>
+              </UserInfo>
+              <Icon name={'coffee'} />
+              <Icon name={'heart'} />
+            </UserWrapper>
+            <Footer>
+              <Text>
+                Achei queijo coalho no Mercado Municipal de Guimarães!
+              </Text>
+            </Footer>
+          </Card02>
+          <Card02>
+            <UserWrapper>
+              <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1613188665424-b6790816c9f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnJhemlsaWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60' }}/>
+              <UserInfo>
+                <TipTitle>Queijo coalho</TipTitle>
+                <UserRole>Rodolfo Araújo  |  Estudante</UserRole>
+                <UserLocal>Braga, Portugal</UserLocal>
+              </UserInfo>
+              <Icon name={'coffee'} />
+              <Icon name={'heart'} />
+            </UserWrapper>
+            <Footer>
+              <Text>
+                Achei queijo coalho no Mercado Municipal de Guimarães!
+              </Text>
+            </Footer>
+          </Card02>
+        </CardView>
     </Container> 
   )
 }   

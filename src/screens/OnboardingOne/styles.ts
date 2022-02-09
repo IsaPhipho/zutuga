@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-import { TouchableOpacity } from 'react-native';
+// import { TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
@@ -68,13 +68,11 @@ export const FirstCircle = styled.View`
 
 export const SecondCircle = styled.View`
   background-color: ${({ theme }) => theme.colors.shape};
-  width: 5;
-  height: 5;
+  width: 5px;
+  height: 5px;
   border-radius: 2px;
   margin-left: 16px;
 `;
-
-export const NextButton = styled(TouchableOpacity)``;
 
 export const IconNext = styled(Feather)`
   margin-left: ${RFValue(32)}px;

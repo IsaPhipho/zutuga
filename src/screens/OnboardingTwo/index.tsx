@@ -1,7 +1,13 @@
 import React from 'react';
 
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
+
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
 
 import communityOrange from '../../assets/images/communityOrange.png';
 
@@ -16,11 +22,15 @@ import {
   View,
   FirstCircle,
   SecondCircle,
-  NextButton,
   IconNext
 } from './styles';
 
 export function OnboardingTwo() {
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+  function handleNavigateToLogin() {
+    navigate('Login');
+  }
+
   return (
     <Container>
       <Header>
@@ -53,9 +63,9 @@ export function OnboardingTwo() {
         <FirstCircle />
         <SecondCircle />
         </View>
-        <NextButton onPress={() => {}}>
+        <TouchableOpacity onPress={() => handleNavigateToLogin()}>
           <IconNext name="arrow-right" />
-        </NextButton>
+        </TouchableOpacity>
       </Footer>   
     </Container>  
   )

@@ -18,6 +18,8 @@ import {
 
 import { NavigationContainer } from '@react-navigation/native';
 
+import { AuthProvider } from './src/contexts/auth';
+
 // import { OnboardingOne } from './src/screens/OnboardingOne';
 // import { OnboardingTwo } from './src/screens/OnboardingTwo';
 // import { Login } from './src/screens/Login';
@@ -33,7 +35,9 @@ import { NavigationContainer } from '@react-navigation/native';
 
 // import { Links } from './src/screens/Links';
 
-import { AppRoutes } from './src/routes/app.routes';
+// import { AppRoutes } from './src/routes/app.routes';
+
+import Routes from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -58,7 +62,10 @@ export default function App() {
         />
         {/* <DoubtList /> */}
         <NavigationContainer>
-          <AppRoutes />
+          {/* <AppRoutes /> */}
+          <AuthProvider>
+            <Routes />
+          </AuthProvider>
         </NavigationContainer>
       </ThemeProvider>
     </GestureHandlerRootView>

@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext} from 'react';
+
+import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { Input } from '../../components/Forms/Input';
 import { Button } from '../../components/Forms/Button';
 
+import AuthContext from '../../contexts/auth';
+
 import { 
   Container, 
-  Logo,
   Header,
   BorderLine,
   Title,
@@ -22,10 +25,18 @@ import {
 } from './styles';
 
 export function Login() {
+  const { signed , login} = useContext(AuthContext);
+
+  console.log(signed);
+    // email, password (formulário omitido)
+  function handleLogin() {
+    login();
+  }
+
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title> 
           Entre na conta
         </Title>
@@ -47,7 +58,10 @@ export function Login() {
           />
           <Input placeholder="Senha"
           />
-          <Button title="Entrar"/>
+          <Button 
+            title="Entrar"
+            onPress={handleLogin}
+          />
         </Fields>
         <FormText>
           <ForgotText>Esqueceu a sua senha?{" "}</ForgotText> 
@@ -58,7 +72,10 @@ export function Login() {
 
       <Footer>
         <FooterText>Ainda não tem conta?</FooterText>
-        <Button title="Cadastrar a minha conta"/>
+        <Button 
+          title="Cadastrar a minha conta"
+
+        />
       </Footer>  
     </Container>  
   )

@@ -18,15 +18,6 @@ export const Header = styled.View`
   
 `;
 
-export const Logo = styled.Text`
-  font-size: ${RFValue(32)}px;
-  font-family: ${({ theme }) => theme.fonts.black};
-
-  color: ${({ theme }) => theme.colors.attention};
-
-  margin-top: ${RFPercentage(4)}px;
-`;
-
 export const Title = styled.Text`
   font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
@@ -48,11 +39,6 @@ export const UserWrapper = styled.View`
   flex-direction: row;
   justify-content: center;
 `;
-
-// export const UserInfo = styled.View`
-//   flex-direction: row;
-  
-// `;
 
 export const Photo = styled.Image`
   width: ${RFValue(48)}px;
@@ -90,7 +76,7 @@ export const Content = styled.ScrollView``;
 
 export const Form = styled.View`
   margin-top: ${RFValue(16)}px;
-  margin-bottom: ${RFValue(16)}px;
+  margin-bottom: ${RFValue(8)}px;
 `; 
 
 export const Fields = styled.View`
@@ -105,7 +91,8 @@ export const Footer = styled.View`
 `;
 
 export const InputText = styled.Text`
-  font-size: ${RFValue(16)}px;
+  margin-top: ${RFValue(16)}px;
+  font-size: ${RFValue(14)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 
   color: ${({ theme }) => theme.colors.primary.main};

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Modal, Alert } from 'react-native';
 
+import { Logo } from '../../components/Logo';
+
 import { LinearGradient } from 'expo-linear-gradient';
 
 import {
@@ -18,7 +20,6 @@ import { CategorySelect } from '../CategorySelect';
 import { 
   Container, 
   Header,
-  Logo,
   Title,
   BorderLine,
   Body,
@@ -79,11 +80,10 @@ export function Home() {
     
   }
 
-
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title>Categorias</Title>
       </Header>
       <BorderLine>

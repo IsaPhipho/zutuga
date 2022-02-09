@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { TextInput } from "react-native";
 
 export const Container = styled.View`
   flex: 1;
@@ -17,15 +18,6 @@ export const Header = styled.View`
   
 `;
 
-export const Logo = styled.Text`
-  font-size: ${RFValue(32)}px;
-  font-family: ${({ theme }) => theme.fonts.black};
-
-  color: ${({ theme }) => theme.colors.attention};
-
-  margin-top: ${RFPercentage(4)}px;
-`;
-
 export const Title = styled.Text`
   font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
@@ -38,3 +30,42 @@ export const Title = styled.Text`
 export const BorderLine = styled.View`
   height: 2px;
 `;
+
+export const Body = styled.View`
+  margin-top: 16px;
+  margin-left: 32px;
+  margin-right: 32px;
+`;
+
+export const MessageBox = styled(TextInput)`
+  width: 100%;
+  height: 200px;
+
+  align-items: center;
+
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${RFValue(14)}px;
+
+  color: ${({ theme }) => theme.colors.primary.main};
+  background-color: ${({ theme }) => theme.colors.text};
+  
+  border-radius: 5px;
+  border-color: ${({ theme }) => theme.colors.primary.main};
+`;
+
+export const MessageText = styled.Text`
+  margin-top: 16px;
+  margin-bottom: ${RFValue(8)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${RFValue(14)}px;
+
+  color: ${({ theme }) => theme.colors.primary.main};
+`;
+
+export const Footer = styled.View`
+  margin-top: 16px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: ${RFValue(24)}px;
+`;
+

@@ -18,15 +18,6 @@ export const Header = styled.View`
   
 `;
 
-export const Logo = styled.Text`
-  font-size: ${RFValue(32)}px;
-  font-family: ${({ theme }) => theme.fonts.black};
-
-  color: ${({ theme }) => theme.colors.attention};
-
-  margin-top: ${RFPercentage(4)}px;
-`;
-
 export const Title = styled.Text`
   font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.bold};

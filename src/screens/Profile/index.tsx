@@ -2,15 +2,14 @@ import React from 'react';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { Logo } from '../../components/Logo';
+
 import { Input } from '../../components/Forms/Input';
 import { InputMessage } from '../../components/Forms/InputMessage';
 import { Button } from '../../components/Forms/Button';
 
-import { Home } from '../Home';
-
 import { 
-  Container, 
-  Logo,
+  Container,
   Header,
   BorderLine,
   UserWrapper,
@@ -29,9 +28,9 @@ export function Profile() {
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title> 
-          Olá, Isa!
+          Olá, Tayla Soares!
         </Title>
       </Header>
       <BorderLine>
@@ -46,7 +45,7 @@ export function Profile() {
         </LinearGradient>
       </BorderLine>
       <UserWrapper>
-        <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/47599339?v=4}'}}
+        <Photo source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60'}}
         /> 
         <IconEdit name="edit" />
       </UserWrapper>
@@ -62,8 +61,8 @@ export function Profile() {
           </Fields>
         </Form> 
         <Footer>
-          <InputText>Sobre mim:</InputText>
-          <InputMessage placeholder="Digite aqui"/>
+          <InputText>Escreva um pouco sobre você:</InputText>
+          <InputMessage />
           <Button title="Atualizar"/>
         </Footer> 
       </Content> 

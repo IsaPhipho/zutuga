@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Modal } from 'react-native';
+
+import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { CategorySelect } from '../CategorySelect';
+import { CategorySelectButton } from '../../components/CategorySelectButton';
+
+import { Button } from '../../components/Forms/Button';
+import { ButtonPush } from '../../components/ButtonPush';
+
 import { 
   Container, 
-  Logo,
   Title,
   Header,
-  BorderLine
+  BorderLine,
+  Body,
+  Footer,
+  MessageText,
+  MessageBox
 } from './styles';
 
 export function SendDoubt() {
+  const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+  const [category, setCategory] = useState({
+    key: 'category',
+    name:'Categoria'
+  });
+
+  function handleOpenSelectCategoryModal() {
+    setCategoryModalOpen(true);
+  }
+
+  function handleCloseSelectCategoryModal() {
+    setCategoryModalOpen(false);
+  }
+
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title> 
           Envie sua dúvida
         </Title>
@@ -30,6 +57,26 @@ export function SendDoubt() {
           }}>
         </LinearGradient>
       </BorderLine>
+      <Body>
+        <CategorySelectButton 
+            title={category.name}
+            onPress={handleOpenSelectCategoryModal}
+          />
+      </Body>
+
+      <Modal visible={categoryModalOpen}>
+        <CategorySelect
+          category={category}
+          setCategory={setCategory}
+          closeSelectCategory={handleCloseSelectCategoryModal}
+        />
+      </Modal>
+      <Footer>
+          <MessageText>Digite sua dúvida:</MessageText>
+          <MessageBox />
+          <ButtonPush title="Anexar"/>
+          <Button title="Enviar"/>
+        </Footer> 
     </Container> 
   )
 }   

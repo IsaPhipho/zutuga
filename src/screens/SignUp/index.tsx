@@ -1,13 +1,14 @@
 import React from 'react';
 
+import { Logo } from '../../components/Logo';
+
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { Input } from '../../components/Forms/Input';
 import { Button } from '../../components/Forms/Button';
 
 import { 
-  Container, 
-  Logo,
+  Container,
   Header,
   BorderLine,
   Title,
@@ -22,7 +23,7 @@ export function SignUp() {
   return (
     <Container>
       <Header>
-        <Logo>zutuga</Logo>
+        <Logo />
         <Title> 
           Cadastre a sua conta
         </Title>

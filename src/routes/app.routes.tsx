@@ -103,8 +103,8 @@ export function AppRoutes() {
         component={Links}
         options={{
           tabBarIcon: (({ color }) => 
-            <Ionicons
-              name="navigate-circle-sharp"
+            <MaterialCommunityIcons
+              name="share-circle"
               size={32}
               color={color}
             /> 
