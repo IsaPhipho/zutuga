@@ -6,9 +6,16 @@ import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
+
 import { CategorySelect } from '../CategorySelect';
 import { CategorySelectButton } from '../../components/CategorySelectButton';
 import { DetailDoubt } from '../DetailDoubt';
+import { ButtonPush } from '../../components/ButtonPush';
 
 import { 
   Container, 
@@ -30,15 +37,22 @@ import {
   Text,
   TextMore,
   Icon,
+  View
 } from './styles';
 
 export function DoubtList() {
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+
   const [doubtModalOpen, setDoubtModalOpen] = useState(false);
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
   const [category, setCategory] = useState({
     key: 'category',
     name:'Categoria'
   });
+
+  function handleNavigateToHome() {
+    navigate('Home');
+  }
 
   function handleOpenSelectCategoryModal() {
     setCategoryModalOpen(true);
@@ -195,6 +209,12 @@ export function DoubtList() {
             </Text>
           </Footer>
         </Card02>
+        <View>
+          <ButtonPush 
+            title="Voltar"
+            onPress={handleNavigateToHome}
+          />
+        </View>
       </Content>    
     </Container> 
   )

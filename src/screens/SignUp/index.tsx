@@ -63,7 +63,7 @@ export function SignUp() {
           />
           <Button 
             title="Cadastrar"
-            onPress={() => handleNavigateToLogin()}
+            onPress={handleNavigateToLogin}
           />
         </Fields>
       </Form> 
@@ -72,7 +72,7 @@ export function SignUp() {
         <FooterText>Já tem conta?</FooterText>
         <Button 
           title="Entrar na conta"
-          onPress={() => handleNavigateToLogin()}
+          onPress={handleNavigateToLogin}
         />
       </Footer>  
     </Container>  

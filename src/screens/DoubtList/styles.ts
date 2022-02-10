@@ -154,3 +154,6 @@ export const Icon = styled(
   color: ${({ theme }) => theme.colors.primary.main};
 `;
 
+export const View = styled.View`
+  margin-top: ${RFValue(24)}px;
+`;

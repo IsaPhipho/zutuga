@@ -62,10 +62,14 @@ export const MessageText = styled.Text`
   color: ${({ theme }) => theme.colors.primary.main};
 `;
 
+export const Content = styled.ScrollView``;
+
 export const Footer = styled.View`
   margin-top: 16px;
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: ${RFValue(24)}px;
 `;
+
+
 

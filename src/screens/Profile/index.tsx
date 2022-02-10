@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Modal } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -7,6 +9,7 @@ import { Logo } from '../../components/Logo';
 import { Input } from '../../components/Forms/Input';
 import { InputMessage } from '../../components/Forms/InputMessage';
 import { Button } from '../../components/Forms/Button';
+import { Success } from '../Success';
 
 import { 
   Container,
@@ -24,6 +27,15 @@ import {
 } from './styles';
 
 export function Profile() {
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+
+  function handleOpenSuccessModal() {
+    setSuccessModalOpen(true);
+  }
+
+  function handleCloseSuccessModal() {
+    setSuccessModalOpen(false);
+  }
 
   return (
     <Container>
@@ -44,6 +56,11 @@ export function Profile() {
           }}>
         </LinearGradient>
       </BorderLine>
+      <Modal visible={successModalOpen}>
+        <Success
+          closeSuccessMessage={handleCloseSuccessModal}
+        />
+      </Modal>
       <UserWrapper>
         <Photo source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60'}}
         /> 
@@ -63,7 +80,10 @@ export function Profile() {
         <Footer>
           <InputText>Escreva um pouco sobre você:</InputText>
           <InputMessage />
-          <Button title="Atualizar perfil"/>
+          <Button 
+            title="Atualizar perfil"
+            onPress={handleOpenSuccessModal}
+          />
         </Footer> 
       </Content> 
     </Container>  

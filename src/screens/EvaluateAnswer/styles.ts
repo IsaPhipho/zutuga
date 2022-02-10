@@ -40,7 +40,7 @@ export const Body = styled.View`
 
 export const Card = styled.View`
   margin-top: 8px;
-  height: 152px;
+  height: 272px;
   
   background-color: ${({ theme }) => theme.colors.text};
  
@@ -93,9 +93,9 @@ export const FooterCard = styled.View`
   flex-direction: row;
   justify-content: space-between;
 
-  margin-left: 60px;
-  margin-right: 32px;
-  margin-top: 4px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
 `;
 
 export const Text = styled.Text`
@@ -116,9 +116,10 @@ export const IconCard = styled(
 
 export const MessageBox = styled(TextInput)`
   width: 100%;
-  height: 200px;
+  height: 80px;
+  margin-bottom: ${RFValue(16)}px;
 
-  align-items: center;
+  padding: 16px 8px;
 
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(14)}px;
@@ -146,5 +147,19 @@ export const Footer = styled.View`
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: ${RFValue(24)}px;
+`;
+
+export const IconView = styled.View`
+  flex-direction: row;
+  margin-bottom: ${RFValue(16)}px;
+`;
+
+export const Icon= styled(
+  MaterialCommunityIcons)`
+  font-size: ${RFValue(20)}px;
+  margin-left: 4px;
+  margin-right: 8px;
+  margin-top: 4px;
+  color: ${({ theme }) => theme.colors.primary.main};
 `;
 

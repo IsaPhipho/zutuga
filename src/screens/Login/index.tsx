@@ -85,7 +85,7 @@ export function Login() {
         <FooterText>Ainda não tem conta?</FooterText>
         <Button 
           title="Cadastrar a minha conta"
-          onPress={() => handleNavigateToSignUp()}
+          onPress={handleNavigateToSignUp}
         />
       </Footer>  
     </Container>  

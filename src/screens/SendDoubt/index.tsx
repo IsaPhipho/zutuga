@@ -6,11 +6,18 @@ import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
+
 import { CategorySelect } from '../CategorySelect';
 import { CategorySelectButton } from '../../components/CategorySelectButton';
 
 import { Button } from '../../components/Forms/Button';
 import { ButtonPush } from '../../components/ButtonPush';
+import { Success } from '../Success';
 
 import { 
   Container, 
@@ -18,17 +25,33 @@ import {
   Header,
   BorderLine,
   Body,
+  Content,
   Footer,
   MessageText,
   MessageBox
 } from './styles';
 
 export function SendDoubt() {
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
   const [category, setCategory] = useState({
     key: 'category',
     name:'Categoria'
   });
+
+  function handleNavigateToHome() {
+    navigate('Home');
+  }
+
+  function handleOpenSuccessModal() {
+    setSuccessModalOpen(true);
+  }
+
+  function handleCloseSuccessModal() {
+    setSuccessModalOpen(false);
+  }
 
   function handleOpenSelectCategoryModal() {
     setCategoryModalOpen(true);
@@ -71,12 +94,26 @@ export function SendDoubt() {
           closeSelectCategory={handleCloseSelectCategoryModal}
         />
       </Modal>
-      <Footer>
-          <MessageText>Digite sua dúvida:</MessageText>
-          <MessageBox />
-          <ButtonPush title="Anexar arquivos (máx. 300KB)"/>
-          <Button title="Publicar"/>
-        </Footer> 
+      <Modal visible={successModalOpen}>
+        <Success
+          closeSuccessMessage={handleCloseSuccessModal}
+        />
+      </Modal>
+      <Content>
+        <Footer>
+            <MessageText>Digite sua dúvida:</MessageText>
+            <MessageBox />
+            <ButtonPush title="Anexar arquivos (máx. 300KB)"/>
+            <Button 
+              title="Publicar"
+              onPress={handleOpenSuccessModal}
+            />
+            <ButtonPush 
+              title="Voltar"
+              onPress={handleNavigateToHome}
+            />
+          </Footer> 
+        </Content>
     </Container> 
   )
 }   

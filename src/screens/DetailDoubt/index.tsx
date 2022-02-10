@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Modal } from 'react-native';
 
 import { Logo } from '../../components/Logo';
 
@@ -7,6 +9,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { InputMessage } from '../../components/Forms/InputMessage';
 import { Button } from '../../components/Forms/Button';
 import { ButtonPush } from '../../components/ButtonPush';
+import { Success } from '../Success';
 
 
 import { 
@@ -35,6 +38,15 @@ interface Props {
 export function DetailDoubt({
   closeDetailDoubt
 }: Props) {
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+
+  function handleOpenSuccessModal() {
+    setSuccessModalOpen(true);
+  }
+
+  function handleCloseSuccessModal() {
+    setSuccessModalOpen(false);
+  }
 
   return (
     <Container>
@@ -55,6 +67,11 @@ export function DetailDoubt({
           }}>
         </LinearGradient>
       </BorderLine>
+      <Modal visible={successModalOpen}>
+        <Success
+          closeSuccessMessage={handleCloseSuccessModal}
+        />
+      </Modal>
         <Card>
           <UserWrapper>
             <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80' }}/>
@@ -77,7 +94,10 @@ export function DetailDoubt({
       <InputView>
         <InputText> Responder:</InputText>
         <InputMessage />  
-        <Button title="Enviar Resposta" />  
+        <Button 
+          title="Enviar Resposta" 
+          onPress={handleOpenSuccessModal}
+        />  
         <ButtonPush 
           title="Voltar para Listagem" 
           onPress={closeDetailDoubt}
