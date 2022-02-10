@@ -4,6 +4,12 @@ import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
+
 import { Input } from '../../components/Forms/Input';
 import { Button } from '../../components/Forms/Button';
 
@@ -26,11 +32,16 @@ import {
 
 export function Login() {
   const { signed , login} = useContext(AuthContext);
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
 
   console.log(signed);
     // email, password (formulário omitido)
   function handleLogin() {
     login();
+  }
+
+  function handleNavigateToSignUp() {
+    navigate('SignUp');
   }
 
   return (
@@ -74,7 +85,7 @@ export function Login() {
         <FooterText>Ainda não tem conta?</FooterText>
         <Button 
           title="Cadastrar a minha conta"
-
+          onPress={() => handleNavigateToSignUp()}
         />
       </Footer>  
     </Container>  

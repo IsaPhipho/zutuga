@@ -30,7 +30,7 @@ export function Profile() {
       <Header>
         <Logo />
         <Title> 
-          Olá, Tayla Soares!
+          Meu Perfil
         </Title>
       </Header>
       <BorderLine>
@@ -63,7 +63,7 @@ export function Profile() {
         <Footer>
           <InputText>Escreva um pouco sobre você:</InputText>
           <InputMessage />
-          <Button title="Atualizar"/>
+          <Button title="Atualizar perfil"/>
         </Footer> 
       </Content> 
     </Container>  

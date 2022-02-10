@@ -27,8 +27,8 @@ import {
 
 export function OnboardingTwo() {
   const { navigate }: NavigationProp<ParamListBase> = useNavigation();
-  function handleNavigateToLogin() {
-    navigate('Login');
+  function handleNavigateToSignUp() {
+    navigate('SignUp');
   }
 
   return (
@@ -63,7 +63,7 @@ export function OnboardingTwo() {
         <FirstCircle />
         <SecondCircle />
         </View>
-        <TouchableOpacity onPress={() => handleNavigateToLogin()}>
+        <TouchableOpacity onPress={handleNavigateToSignUp}>
           <IconNext name="arrow-right" />
         </TouchableOpacity>
       </Footer>   

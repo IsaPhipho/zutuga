@@ -12,7 +12,13 @@ import {
   Title,
   Header,
   BorderLine,
+  Content,
   Body,
+  FirstSectionLink,
+  SecondSectionLink,
+  ThirdSectionLink,
+  FourthSectionLink,
+  FifthSectionLink
 } from './styles';
 
 export function Links() {
@@ -35,69 +41,80 @@ export function Links() {
           }}>
         </LinearGradient>
       </BorderLine>
-      <Body>
- 
-        <ButtonLink 
-          title="CNAIM"
-          onPress={() => { 
-            Linking.openURL('https://www.acm.gov.pt/inicio'); 
-          }}
-        />
-        <ButtonLink 
-          title="DGES"
-          onPress={() => { 
-            Linking.openURL('https://www.dges.gov.pt/pt'); 
-          }}
-        />
-        <ButtonLink 
-          title="Finanças"
-          onPress={() => { 
-            Linking.openURL('https://www.portaldasfinancas.gov.pt/at/html/index.html'); 
-          }}
-        />
-        <ButtonLink 
-          title="IEFP"
-          onPress={() => { 
-            Linking.openURL('https://www.iefp.pt/'); 
-          }}
-        />
-        <ButtonLink 
-          title="IMT"
-          onPress={() => { 
-            Linking.openURL('https://www.imt-ip.pt/sites/IMTT/Portugues/Paginas/IMTHome.aspx'); 
-          }}
-        />
-        <ButtonLink 
-          title="IRN"
-          onPress={() => { 
-            Linking.openURL('https://irn.justica.gov.pt/'); 
-          }}
-        />
-        <ButtonLink 
-          title="PSP"
-          onPress={() => { 
-            Linking.openURL('https://www.psp.pt/Pages/homePage.aspx'); 
-          }}
-        />
-        <ButtonLink 
-          title="Segurança Social"
-          onPress={() => { 
-            Linking.openURL('https://www.seg-social.pt/inicio'); 
-          }}
-        />
-        <ButtonLink 
-          title="SEF"
-          onPress={() => { 
-            Linking.openURL('https://www.sef.pt/pt/Pages/Homepage.aspx'); 
-          }}
-        />
-        <ButtonLink 
-          title="SNS"
-          onPress={() => { 
-            Linking.openURL('https://www.sns.gov.pt/'); 
-          }}
-        />
-      </Body>  
+      <Content>
+        <Body>
+          <FirstSectionLink>
+            <ButtonLink 
+              title="CNAIM"
+              onPress={() => { 
+                Linking.openURL('https://www.acm.gov.pt/inicio'); 
+              }}
+            />
+            <ButtonLink 
+              title="DGES"
+              onPress={() => { 
+                Linking.openURL('https://www.dges.gov.pt/pt'); 
+              }}
+            />
+          </FirstSectionLink>  
+          <SecondSectionLink>
+            <ButtonLink 
+              title="Finanças"
+              onPress={() => { 
+                Linking.openURL('https://www.portaldasfinancas.gov.pt/at/html/index.html'); 
+              }}
+            />
+            <ButtonLink 
+              title="IEFP"
+              onPress={() => { 
+                Linking.openURL('https://www.iefp.pt/'); 
+              }}
+            />
+          </SecondSectionLink>
+          <ThirdSectionLink>
+            <ButtonLink 
+              title="IMT"
+              onPress={() => { 
+                Linking.openURL('https://www.imt-ip.pt/sites/IMTT/Portugues/Paginas/IMTHome.aspx'); 
+              }}
+            />
+            <ButtonLink 
+              title="IRN"
+              onPress={() => { 
+                Linking.openURL('https://irn.justica.gov.pt/'); 
+              }}
+            />
+          </ThirdSectionLink>
+          <FourthSectionLink>
+            <ButtonLink 
+              title="PSP"
+              onPress={() => { 
+                Linking.openURL('https://www.psp.pt/Pages/homePage.aspx'); 
+              }}
+            />
+            <ButtonLink 
+              title="Segurança Social"
+              onPress={() => { 
+                Linking.openURL('https://www.seg-social.pt/inicio'); 
+              }}
+            />
+          </FourthSectionLink>
+          <FifthSectionLink>
+            <ButtonLink 
+              title="SEF"
+              onPress={() => { 
+                Linking.openURL('https://www.sef.pt/pt/Pages/Homepage.aspx'); 
+              }}
+            />
+            <ButtonLink 
+              title="SNS"
+              onPress={() => { 
+                Linking.openURL('https://www.sns.gov.pt/'); 
+              }}
+            />
+          </FifthSectionLink>
+        </Body>  
+      </Content>
     </Container>  
   )
 }

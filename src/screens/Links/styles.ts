@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-// import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
   flex: 1;
@@ -31,9 +30,43 @@ export const BorderLine = styled.View`
   height: 2px;
 `;
 
-export const Body = styled.ScrollView`
+export const Content = styled.ScrollView`
+  margin-bottom: 8px;
+`;
+
+export const Body = styled.View`
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 16px;
+`;
+
+export const FirstSectionLink = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+`;
+
+export const SecondSectionLink = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+`;
+
+export const ThirdSectionLink = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+`;
+
+export const FourthSectionLink = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+`;
+
+export const FifthSectionLink = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
 `;

@@ -4,6 +4,12 @@ import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
+
 import { Input } from '../../components/Forms/Input';
 import { Button } from '../../components/Forms/Button';
 
@@ -20,6 +26,11 @@ import {
 } from './styles';
 
 export function SignUp() {
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+  function handleNavigateToLogin() {
+    navigate('Login');
+  }
+
   return (
     <Container>
       <Header>
@@ -50,13 +61,19 @@ export function SignUp() {
           />
           <Input placeholder="Repetir senha"
           />
-          <Button title="Cadastrar"/>
+          <Button 
+            title="Cadastrar"
+            onPress={() => handleNavigateToLogin()}
+          />
         </Fields>
       </Form> 
 
       <Footer>
         <FooterText>Já tem conta?</FooterText>
-        <Button title="Entrar na conta"/>
+        <Button 
+          title="Entrar na conta"
+          onPress={() => handleNavigateToLogin()}
+        />
       </Footer>  
     </Container>  
   )

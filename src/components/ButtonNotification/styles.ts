@@ -4,9 +4,12 @@ import { RFValue } from 'react-native-responsive-fontsize';
 
 
 export const Container = styled(TouchableOpacity)`
-  width: 48%;
-  height: 80px;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.text};
+
+  margin-top: 16px; 
+  margin-bottom: 32px; 
+  height: 80px;
 
   padding: 16px;
 
@@ -15,15 +18,13 @@ export const Container = styled(TouchableOpacity)`
   border-color: ${({ theme }) => theme.colors.primary.main};
 
   align-items: center;
-  margin-top: 12px;
 
   flex-direction: row;
-  justify-content: center;
 `;
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(14)}px;
+  font-size: ${RFValue(16)}px;
 
   color: ${({ theme }) => theme.colors.primary.dark};  
 `;

@@ -33,7 +33,7 @@ import {
 } from './styles';
 
 export function DoubtList() {
-  const [doubtModalOpen, setDoubtModalOpen] = useState(true);
+  const [doubtModalOpen, setDoubtModalOpen] = useState(false);
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
   const [category, setCategory] = useState({
     key: 'category',

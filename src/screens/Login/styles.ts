@@ -10,7 +10,6 @@ export const Container = styled.View`
 export const Header = styled.View`
   width: 100%;
   height: ${RFPercentage(21)}px; 
-  margin-top: ${RFPercentage(4)}px;
 
   justify-content: center;
   align-items: center;

@@ -74,8 +74,8 @@ export function SendTip() {
       <Footer>
           <MessageText>Digite sua dica:</MessageText>
           <MessageBox />
-          <ButtonPush title="Anexar"/>
-          <Button title="Enviar"/>
+          <ButtonPush title="Anexar arquivos (max. 300KB)"/>
+          <Button title="Publicar"/>
         </Footer> 
     </Container> 
   )

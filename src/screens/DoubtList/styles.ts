@@ -39,12 +39,12 @@ export const Body = styled.View`
 export const Content = styled.ScrollView`
   margin-top: 16px;
   margin-bottom: 16px;
+  margin-left: 32px;
+  margin-right: 32px;
 `;
 
 export const Card = styled.View`
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
  
   height: 104px;
   
@@ -58,8 +58,6 @@ export const Card = styled.View`
 
 export const Card02 = styled.View`
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
  
   height: 104px;
   
@@ -73,8 +71,6 @@ export const Card02 = styled.View`
 
 export const Card03 = styled.View`
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
  
   height: 104px;
   

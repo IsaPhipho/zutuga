@@ -74,8 +74,8 @@ export function SendDoubt() {
       <Footer>
           <MessageText>Digite sua dúvida:</MessageText>
           <MessageBox />
-          <ButtonPush title="Anexar"/>
-          <Button title="Enviar"/>
+          <ButtonPush title="Anexar arquivos (máx. 300KB)"/>
+          <Button title="Publicar"/>
         </Footer> 
     </Container> 
   )

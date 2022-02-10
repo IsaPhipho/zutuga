@@ -62,7 +62,7 @@ export function OnboardingOne() {
         <FirstCircle />
         <SecondCircle />
         </View>
-        <TouchableOpacity  onPress={() => handleNavigateToNextPage()}>
+        <TouchableOpacity  onPress={handleNavigateToNextPage}>
           <IconNext name="arrow-right" />
         </TouchableOpacity >
       </Footer>  

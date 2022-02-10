@@ -84,7 +84,7 @@ export function Home() {
     <Container>
       <Header>
         <Logo />
-        <Title>Categorias</Title>
+        <Title>Olá, Juliana!</Title>
       </Header>
       <BorderLine>
         <LinearGradient
@@ -122,19 +122,19 @@ export function Home() {
             />
           </FirstSectionType>
           <SecondSectionType>
-              <SectionTypeButton 
-                type="listTip"
-                title="Listar dicas"
-                onPress={() => handleSectionTypeSelect('listTip')}
-                isActive={sectionType === 'listTip'}
-              />
-              <SectionTypeButton 
-                type="tip"
-                title="Enviar dica"
-                onPress={() => handleSectionTypeSelect('tip')}
-                isActive={sectionType === 'tip'}
-              />
-            </SecondSectionType>
+            <SectionTypeButton 
+              type="listTip"
+              title="Listar dicas"
+              onPress={() => handleSectionTypeSelect('listTip')}
+              isActive={sectionType === 'listTip'}
+            />
+            <SectionTypeButton 
+              type="tip"
+              title="Enviar dica"
+              onPress={() => handleSectionTypeSelect('tip')}
+              isActive={sectionType === 'tip'}
+            />
+          </SecondSectionType>
         <Button 
           title="Confirmar"
           onPress={handleSelectSection}

@@ -22,8 +22,10 @@ import { SendTip } from '../screens/SendTip';
 import { Links } from '../screens/Links';
 import { Profile } from '../screens/Profile';
 import { FavoriteList } from '../screens/FavoriteList';
+import { Notification } from '../screens/Notification';
+import { EvaluateAnswer } from '../screens/EvaluateAnswer';
 
-function StackNav() {
+function HomeNav() {
   return (
     <NavigationContainer independent={true}>
       <Stack.Navigator>
@@ -50,6 +52,35 @@ function StackNav() {
         <Stack.Screen
           name="SendTip"
           component={SendTip}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function NotificationNav() {
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+      <Stack.Screen
+        name="Notification"
+        component={Notification}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+          name="Links"
+          component={Links}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="EvaluateAnswer"
+          component={EvaluateAnswer}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="TipList"
+          component={TipList}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
@@ -86,8 +117,8 @@ export function AppRoutes() {
       }}
     >
       <Tab.Screen
-        name="StackNav"
-        component={StackNav}
+        name="HomeNav"
+        component={HomeNav}
         options={{
           tabBarIcon: (({ color }) => 
             <MaterialCommunityIcons
@@ -118,6 +149,19 @@ export function AppRoutes() {
           tabBarIcon: (({ color }) => 
             <MaterialCommunityIcons
               name="heart-circle"
+              size={32}
+              color={color}
+            /> 
+          )
+        }}  
+      />
+      <Tab.Screen
+        name="NotificationNav"
+        component={NotificationNav}
+        options={{
+          tabBarIcon: (({ color }) => 
+            <MaterialCommunityIcons
+              name="bell-circle"
               size={32}
               color={color}
             /> 

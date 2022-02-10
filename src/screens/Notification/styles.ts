@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
   flex: 1;
@@ -19,39 +19,29 @@ export const Header = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: ${RFValue(24)}px;
+  font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
 
   color: ${({ theme }) => theme.colors.shape};
 
-  margin-top: ${RFValue(32)}px;
+  margin-top: ${RFValue(16)}px;
 `;
 
 export const BorderLine = styled.View`
   height: 2px;
 `;
 
-export const Form = styled.View`
-  justify-content: space-between;
-
-  padding: 32px;
-`; 
-
-export const Fields = styled.View``;
-
-export const Footer = styled.View`
+export const Body = styled.ScrollView`
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: ${RFValue(24)}px;
+  margin-top: 16px;
 `;
 
-export const FooterText = styled.Text`
+export const Icon = styled(Feather)`
   font-size: ${RFValue(16)}px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  margin-top: 16px;
+  margin-right: 16px;
+  justify-content: center;
 
-  color: ${({ theme }) => theme.colors.primary.main};
-
-  margin-bottom: ${RFValue(8)}px;
-
+  color: ${({ theme }) => theme.colors.secondary.main};
 `;
-

@@ -47,27 +47,50 @@ export function FavoriteList() {
         </LinearGradient>
       </BorderLine>
       <DoubtText>Dúvidas</DoubtText>
-      <Card03>
-          <UserWrapper>
-            <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60' }}/>
-            <UserInfo>
-              <TipTitle>Estudos</TipTitle>
-              <UserRole>Tayla Soares  |  Estudante</UserRole>
-              <UserLocal>Salvador, Brasil</UserLocal>
-            </UserInfo>
-            <Icon name={'bell-off-outline'} />
-            <Icon name={'heart'} />
-          </UserWrapper>
-          <Footer>
-            <Text>
-              Tenho interesse em realizar{'\n'}
-              curso de Mestrado em Portugal... 
-            </Text>  
-            <TextMore>
-            leia mais
-            </TextMore> 
-          </Footer>
-        </Card03>
+      <CardView>
+          <Card03>
+            <UserWrapper>
+              <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60' }}/>
+              <UserInfo>
+                <TipTitle>Estudos</TipTitle>
+                <UserRole>Tayla Soares  |  Estudante</UserRole>
+                <UserLocal>Salvador, Brasil</UserLocal>
+              </UserInfo>
+              <Icon name={'bell-off-outline'} />
+              <Icon name={'heart'} />
+            </UserWrapper>
+            <Footer>
+              <Text>
+                Tenho interesse em realizar{'\n'}
+                curso de Mestrado em Portugal... 
+              </Text>  
+              <TextMore>
+              leia mais
+              </TextMore> 
+            </Footer>
+          </Card03>
+          <Card03>
+            <UserWrapper>
+              <UserPhoto source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60' }}/>
+              <UserInfo>
+                <TipTitle>Estudos</TipTitle>
+                <UserRole>Tayla Soares  |  Estudante</UserRole>
+                <UserLocal>Salvador, Brasil</UserLocal>
+              </UserInfo>
+              <Icon name={'bell-off-outline'} />
+              <Icon name={'heart'} />
+            </UserWrapper>
+            <Footer>
+              <Text>
+                Tenho interesse em realizar{'\n'}
+                curso de Mestrado em Portugal... 
+              </Text>  
+              <TextMore>
+              leia mais
+              </TextMore> 
+            </Footer>
+          </Card03>
+        </CardView>  
         <TipText>Dicas</TipText>
         <CardView>
           <Card02>
