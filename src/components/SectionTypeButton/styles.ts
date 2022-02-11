@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/native';
-import { TouchableOpacity } from 'react-native'; 
+import { RectButton } from 'react-native-gesture-handler';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { RFValue } from 'react-native-responsive-fontsize';
@@ -13,18 +13,13 @@ interface ContainerProps {
   type: 'question' | 'tip' | 'listQuestion' | 'listTip';
 }
 
-export const Container = styled(TouchableOpacity)<ContainerProps>`
+export const Container = styled.View<ContainerProps>`
   width: 48%;
-
-  /* flex-direction: row; */
-  align-items: center;
-  justify-content: center;
+  height: 96px;
 
   border-radius: 5px;
 
   background-color: ${({ theme }) => theme.colors.text};
-  
-  padding: 16px; 
 
   ${({ isActive, type }) => isActive && type === 'question' && css`
     background-color: ${({ theme }) => theme.colors.secondary.light};
@@ -41,6 +36,14 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
   ${({ isActive, type }) => isActive && type === 'listTip' && css`
     background-color: ${({ theme }) => theme.colors.secondary.light};
   `};
+`;
+
+export const Button = styled(RectButton)`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 16px;
 `;
 
 export const Icon = styled(MaterialCommunityIcons)<IconProps>`

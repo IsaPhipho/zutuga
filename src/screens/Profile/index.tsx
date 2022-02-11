@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-import { Modal } from 'react-native';
+import { 
+  Modal,
+  TouchableWithoutFeedback, 
+  Keyboard 
+} from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -38,54 +42,56 @@ export function Profile() {
   }
 
   return (
-    <Container>
-      <Header>
-        <Logo />
-        <Title> 
-          Meu Perfil
-        </Title>
-      </Header>
-      <BorderLine>
-        <LinearGradient
-          start={{x:0, y:1}}
-          end={{x:1, y:0}}
-          locations={[0.25, 0.45, 0.75]}
-          colors={['#F5EA4E', '#65FC8E', '#F5785A']}
-          style={{
-            flex: 1
-          }}>
-        </LinearGradient>
-      </BorderLine>
-      <Modal visible={successModalOpen}>
-        <Success
-          closeSuccessMessage={handleCloseSuccessModal}
-        />
-      </Modal>
-      <UserWrapper>
-        <Photo source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60'}}
-        /> 
-        <IconEdit name="edit" />
-      </UserWrapper>
-      <Content>
-        <Form>
-          <Fields>
-            <Input placeholder="Ocupação"
-            />
-            <Input placeholder="Cidade"
-            />
-            <Input placeholder="País"
-            />
-          </Fields>
-        </Form> 
-        <Footer>
-          <InputText>Escreva um pouco sobre você:</InputText>
-          <InputMessage />
-          <Button 
-            title="Atualizar perfil"
-            onPress={handleOpenSuccessModal}
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <Container>
+        <Header>
+          <Logo />
+          <Title> 
+            Meu Perfil
+          </Title>
+        </Header>
+        <BorderLine>
+          <LinearGradient
+            start={{x:0, y:1}}
+            end={{x:1, y:0}}
+            locations={[0.25, 0.45, 0.75]}
+            colors={['#F5EA4E', '#65FC8E', '#F5785A']}
+            style={{
+              flex: 1
+            }}>
+          </LinearGradient>
+        </BorderLine>
+        <Modal visible={successModalOpen}>
+          <Success
+            closeSuccessMessage={handleCloseSuccessModal}
           />
-        </Footer> 
-      </Content> 
-    </Container>  
+        </Modal>
+        <UserWrapper>
+          <Photo source={{ uri: 'https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60'}}
+          /> 
+          <IconEdit name="edit" />
+        </UserWrapper>
+        <Content>
+          <Form>
+            <Fields>
+              <Input placeholder="Ocupação"
+              />
+              <Input placeholder="Cidade"
+              />
+              <Input placeholder="País"
+              />
+            </Fields>
+          </Form> 
+          <Footer>
+            <InputText>Escreva um pouco sobre você:</InputText>
+            <InputMessage />
+            <Button 
+              title="Atualizar perfil"
+              onPress={handleOpenSuccessModal}
+            />
+          </Footer> 
+        </Content> 
+      </Container>  
+    </TouchableWithoutFeedback>
   )
 }

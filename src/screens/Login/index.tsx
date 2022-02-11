@@ -1,4 +1,8 @@
 import React, { useContext} from 'react';
+import { 
+  TouchableWithoutFeedback, 
+  Keyboard
+} from 'react-native';
 
 import { Logo } from '../../components/Logo';
 
@@ -45,49 +49,51 @@ export function Login() {
   }
 
   return (
-    <Container>
-      <Header>
-        <Logo />
-        <Title> 
-          Entre na conta
-        </Title>
-      </Header>
-      <BorderLine>
-        <LinearGradient
-          start={{x:0, y:1}}
-          end={{x:1, y:0}}
-          locations={[0.25, 0.45, 0.75]}
-          colors={['#F5EA4E', '#65FC8E', '#F5785A']}
-          style={{
-            flex: 1
-          }}>
-        </LinearGradient>
-      </BorderLine>
-      <Form>
-        <Fields>
-          <Input placeholder="Email"
-          />
-          <Input placeholder="Senha"
-          />
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <Container>
+        <Header>
+          <Logo />
+          <Title> 
+            Entre na conta
+          </Title>
+        </Header>
+        <BorderLine>
+          <LinearGradient
+            start={{x:0, y:1}}
+            end={{x:1, y:0}}
+            locations={[0.25, 0.45, 0.75]}
+            colors={['#F5EA4E', '#65FC8E', '#F5785A']}
+            style={{
+              flex: 1
+            }}>
+          </LinearGradient>
+        </BorderLine>
+        <Form>
+          <Fields>
+            <Input placeholder="Email"
+            />
+            <Input placeholder="Senha"
+            />
+            <Button 
+              title="Entrar"
+              onPress={handleLogin}
+            />
+          </Fields>
+          <FormText>
+            <ForgotText>Esqueceu a sua senha?{" "}</ForgotText> 
+            <LinkText>{" "}Clique aqui</LinkText>
+          </FormText>
+
+        </Form> 
+
+        <Footer>
+          <FooterText>Ainda não tem conta?</FooterText>
           <Button 
-            title="Entrar"
-            onPress={handleLogin}
+            title="Cadastrar a minha conta"
+            onPress={handleNavigateToSignUp}
           />
-        </Fields>
-        <FormText>
-          <ForgotText>Esqueceu a sua senha?{" "}</ForgotText> 
-          <LinkText>{" "}Clique aqui</LinkText>
-        </FormText>
-
-      </Form> 
-
-      <Footer>
-        <FooterText>Ainda não tem conta?</FooterText>
-        <Button 
-          title="Cadastrar a minha conta"
-          onPress={handleNavigateToSignUp}
-        />
-      </Footer>  
-    </Container>  
+        </Footer>  
+      </Container>
+    </TouchableWithoutFeedback>  
   )
 }

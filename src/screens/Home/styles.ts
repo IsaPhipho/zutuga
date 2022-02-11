@@ -57,7 +57,7 @@ export const FooterText = styled.Text`
 
   color: ${({ theme }) => theme.colors.primary.main};
 
-  margin-top: ${RFValue(24)}px;
+  margin-top: ${RFValue(16)}px;
 `;
 
 export const FirstSectionType = styled.View`
@@ -70,7 +70,7 @@ export const SecondSectionType = styled.View`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 `;
 
 
