@@ -1,7 +1,10 @@
 import React from 'react';
 
+import LottieView from 'lottie-react-native';
+
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image, TouchableOpacity  } from 'react-native';
+import { TouchableOpacity  } from 'react-native';
+
 
 import {
   useNavigation,
@@ -9,14 +12,13 @@ import {
   ParamListBase,
 } from "@react-navigation/native";
 
-import questionOrange from '../../assets/images/questionOrange.png';
+import question from '../../assets/animations/question.json';
 
 import { 
   Container, 
   Logo,
   Header,
   Body, 
-  IconQuestion,
   ObOneText,
   Footer,
   View,
@@ -46,12 +48,13 @@ export function OnboardingOne() {
           <Logo>zutuga</Logo>
           </LinearGradient>
         </Header>
-      <IconQuestion>
-        <Image 
-          source={questionOrange} 
-          style={questionOrange}
-        />
-      </IconQuestion>
+      <LottieView 
+        source={question}
+        style={{ height: 200 }}
+        resizeMode="contain"
+        autoPlay
+        loop
+      />   
       <Body>
         <ObOneText> 
           Tire todas as suas dúvidas sobre imigração, veja dicas da comunidade...

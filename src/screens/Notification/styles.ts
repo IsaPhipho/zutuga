@@ -40,8 +40,6 @@ export const Body = styled.ScrollView`
 export const Icon = styled(Feather)`
   font-size: ${RFValue(16)}px;
   margin-top: 16px;
-  margin-right: 16px;
-  justify-content: center;
 
   color: ${({ theme }) => theme.colors.secondary.main};
 `;

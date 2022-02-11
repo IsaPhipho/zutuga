@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LottieView from 'lottie-react-native';
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { Image, TouchableOpacity } from 'react-native';
 
@@ -9,14 +11,13 @@ import {
   ParamListBase,
 } from "@react-navigation/native";
 
-import communityOrange from '../../assets/images/communityOrange.png';
+import community from '../../assets/animations/community.json';
 
 import { 
   Container, 
   Logo,
   Header,
   Body, 
-  IconCommunity,
   ObOneText,
   Footer,
   View,
@@ -46,12 +47,13 @@ export function OnboardingTwo() {
         <Logo>zutuga</Logo>
         </LinearGradient>
       </Header>
-      <IconCommunity>
-        <Image 
-          source={communityOrange} 
-          style={communityOrange}
-        />
-      </IconCommunity>
+      <LottieView 
+        source={community}
+        style={{ height: 200 }}
+        resizeMode="contain"
+        autoPlay
+        loop
+      /> 
       <Body>
         <ObOneText> 
         Compartilhe informações, conecte-se e ganhe reconhecimento!

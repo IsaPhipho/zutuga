@@ -22,13 +22,8 @@ export const Logo = styled.Text`
   text-align: center;
 `;
 
-export const IconCommunity = styled.View`
-  margin-left: 32px;
-  margin-top: ${RFPercentage(8)}px;
-  margin-bottom: ${RFPercentage(12)}px;
-`;
-
 export const Body = styled.View`
+  margin-top: 48px;
   margin-left: 32px;
   margin-right: 32px;
 `;

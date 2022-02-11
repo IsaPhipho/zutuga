@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { TouchableOpacityProps } from 'react-native';
 
-import { Container, Title } from './styles';
+import { Container, Title, IconNext } from './styles';
 
 interface Props extends TouchableOpacityProps {
   title: string;
@@ -18,6 +18,7 @@ export function ButtonNotification({
       <Title>
         { title }
       </Title>
+      <IconNext name="arrow-right" />
     </Container>
   )
 }

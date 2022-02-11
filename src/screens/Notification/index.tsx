@@ -68,7 +68,7 @@ export function Notification() {
           />
         <Icon name="coffee" />  
           <ButtonNotification
-            title="Uma nova dica foi enviada!"
+            title="Uma nova dica foi enviada para a seção    Dicas!"
             onPress={handleNavigateToTipListp}
           />
       </Body>  
