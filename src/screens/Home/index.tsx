@@ -25,6 +25,7 @@ import {
   Body,
   BodyText,
   Footer,
+  View,
   FooterText,
   FirstSectionType,
   SecondSectionType
@@ -84,7 +85,7 @@ export function Home() {
     <Container>
       <Header>
         <Logo />
-        <Title>Olá, Juliana!</Title>
+        <Title>Olá!</Title>
       </Header>
       <BorderLine>
         <LinearGradient
@@ -135,11 +136,13 @@ export function Home() {
               isActive={sectionType === 'tip'}
             />
           </SecondSectionType>
+      </Footer> 
+      <View>
         <Button 
           title="Confirmar"
           onPress={handleSelectSection}
         />
-      </Footer>  
+      </View>   
       <Modal visible={categoryModalOpen}>
         <CategorySelect
           category={category}

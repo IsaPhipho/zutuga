@@ -52,7 +52,6 @@ export const TipText = styled.Text`
 export const CardView = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
-  marginRight: 32,
   marginTop: 16,
   marginBottom: 32,
   contentContainerStyle: {paddingHorizontal: 12 },

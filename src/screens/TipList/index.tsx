@@ -6,15 +6,15 @@ import { Logo } from '../../components/Logo';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-// import {
-//   useNavigation,
-//   NavigationProp,
-//   ParamListBase,
-// } from "@react-navigation/native";
+import {
+  useNavigation,
+  NavigationProp,
+  ParamListBase,
+} from "@react-navigation/native";
 
 import { CategorySelect } from '../CategorySelect';
 import { CategorySelectButton } from '../../components/CategorySelectButton';
-// import { ButtonPush } from '../../components/ButtonPush';
+import { ButtonPush } from '../../components/ButtonPush';
 
 import { 
   Container, 
@@ -40,7 +40,7 @@ import {
 } from './styles';
 
 export function TipList() {
-  // const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
 
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
   const [category, setCategory] = useState({
@@ -48,9 +48,9 @@ export function TipList() {
     name:'Categoria'
   });
 
-  // function handleNavigateToHome() {
-  //   navigate('Home');
-  // }
+  function handleNavigateToHome() {
+    navigate('Home');
+  }
 
   function handleOpenSelectCategoryModal() {
     setCategoryModalOpen(true);
@@ -156,13 +156,13 @@ export function TipList() {
             </Text>
           </Footer>
         </Card02>
-        {/* <View>
-          <ButtonPush 
-            title="Voltar"
-            onPress={handleNavigateToHome}
-          />
-        </View> */}
-      </Content>    
+      </Content>
+      <View>
+        <ButtonPush 
+          title="Voltar"
+          onPress={handleNavigateToHome}
+        />
+      </View>    
     </Container> 
   )
 }    

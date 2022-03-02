@@ -18,15 +18,6 @@ export const Header = styled.View`
   
 `;
 
-export const Title = styled.Text`
-  font-size: ${RFValue(20)}px;
-  font-family: ${({ theme }) => theme.fonts.bold};
-
-  color: ${({ theme }) => theme.colors.shape};
-
-  margin-top: ${RFValue(16)}px;
-`;
-
 export const BorderLine = styled.View`
   height: 2px;
 `;

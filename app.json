@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "zutuga",
+    "icon": "./assets/iconWhite.png",
     "slug": "zutuga",
     "version": "1.0.0",
     "assetBundlePatterns": [
@@ -8,7 +9,16 @@
     ],
     "splash": {
       "image": "./assets/splash.png",
+      "resizeMode": "contain",
       "backgroundColor": "#00204C"
+    },
+    "ios": {
+      "bundleIdentifier": "com.iphipho.zutuga",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.iphipho.zutuga",
+      "versionCode": 1
     }
   },
   "name": "zutuga"

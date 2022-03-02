@@ -10,7 +10,6 @@ export const Container = styled(RectButton)`
   border-radius: 5px;
   align-items: center;
   margin-top: 16px;
-  margin-bottom: 16px;
   padding: 18px;
 
   flex-direction: row;

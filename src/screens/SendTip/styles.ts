@@ -39,7 +39,7 @@ export const Body = styled.View`
 
 export const MessageBox = styled(TextInput)`
   width: 100%;
-  height: 200px;
+  height: 150px;
 
   align-items: center;
 
@@ -54,7 +54,7 @@ export const MessageBox = styled(TextInput)`
 `;
 
 export const MessageText = styled.Text`
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: ${RFValue(8)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(14)}px;
@@ -62,11 +62,15 @@ export const MessageText = styled.Text`
   color: ${({ theme }) => theme.colors.primary.main};
 `;
 
-export const Content = styled.ScrollView``;
-
 export const Footer = styled.View`
   margin-top: 16px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-bottom: ${RFValue(24)}px;
+  margin-bottom: ${RFValue(16)}px;
+`;
+
+export const View = styled.View`
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: ${RFValue(16)}px;
 `;

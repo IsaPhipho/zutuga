@@ -38,7 +38,7 @@ export const Body = styled.View`
 
 export const Content = styled.ScrollView`
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 `;
 
 export const Card = styled.View`
@@ -160,7 +160,7 @@ export const Icon = styled(
 `;
 
 export const View = styled.View`
-  margin-top: ${RFValue(24)}px;
   margin-left: 32px;
   margin-right: 32px;
+  margin-bottom: 16px;
 `;

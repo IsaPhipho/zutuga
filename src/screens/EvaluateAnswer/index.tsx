@@ -41,7 +41,8 @@ import {
   MessageText,
   MessageBox,
   IconView,
-  Icon
+  Icon,
+  View
 } from './styles';
 
 export function EvaluateAnswer() {
@@ -66,7 +67,7 @@ export function EvaluateAnswer() {
         <Header>
           <Logo />
           <Title> 
-            Ver e avaliar resposta
+            Avaliar resposta
           </Title>
         </Header>
         <BorderLine>
@@ -116,21 +117,23 @@ export function EvaluateAnswer() {
             <MessageBox />
             <MessageText>Avalie:</MessageText>
             <IconView>
-              <Icon name="star-outline" />
-              <Icon name="star-outline" />
-              <Icon name="star-outline" />
+              <Icon name="star" />
+              <Icon name="star" />
+              <Icon name="star" />
               <Icon name="star-outline" />
               <Icon name="star-outline" />
             </IconView>
             <Button title="Publicar"
               onPress={handleOpenSuccessModal}
-            />
-            <ButtonPush 
-              title="Voltar para Notificações" 
-              onPress={handleNavigateToNotification}
-          /> 
+            /> 
           </Footer> 
-        </Content>  
+        </Content> 
+        <View>
+          <ButtonPush 
+            title="Voltar" 
+            onPress={handleNavigateToNotification}
+          />
+        </View> 
       </Container> 
     </TouchableWithoutFeedback>
   )

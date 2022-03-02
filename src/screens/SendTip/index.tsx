@@ -29,10 +29,10 @@ import {
   Header,
   BorderLine,
   Body,
-  Content,
   Footer,
   MessageText,
   MessageBox,
+  View
 } from './styles';
 
 export function SendTip() {
@@ -104,21 +104,21 @@ export function SendTip() {
             closeSuccessMessage={handleCloseSuccessModal}
           />
         </Modal>
-        <Content>
-          <Footer>
-            <MessageText>Digite sua dica:</MessageText>
-            <MessageBox />
-            <ButtonPush title="Anexar arquivos (max. 300KB)"/>
-            <Button 
-              title="Publicar"
-              onPress={handleOpenSuccessModal}
-            />
-            <ButtonPush 
-              title="Voltar"
-              onPress={handleNavigateToHome}
-            />
-          </Footer> 
-        </Content>
+        <Footer>
+          <MessageText>Digite sua dica:</MessageText>
+          <MessageBox />
+          <ButtonPush title="Anexar arquivos (max. 300KB)"/>
+          <Button 
+            title="Publicar"
+            onPress={handleOpenSuccessModal}
+          />
+        </Footer> 
+        <View>
+          <ButtonPush 
+            title="Voltar"
+            onPress={handleNavigateToHome}
+          />
+        </View>
       </Container> 
     </TouchableWithoutFeedback>
   )

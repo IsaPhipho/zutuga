@@ -27,7 +27,8 @@ import {
   Form, 
   Fields,
   Footer,
-  InputText
+  InputText,
+  View
 } from './styles';
 
 export function Profile() {
@@ -85,12 +86,14 @@ export function Profile() {
           <Footer>
             <InputText>Escreva um pouco sobre você:</InputText>
             <InputMessage />
-            <Button 
-              title="Atualizar perfil"
-              onPress={handleOpenSuccessModal}
-            />
           </Footer> 
-        </Content> 
+        </Content>  
+        <View>
+          <Button 
+            title="Atualizar perfil"
+            onPress={handleOpenSuccessModal}
+          />
+        </View>
       </Container>  
     </TouchableWithoutFeedback>
   )

@@ -31,7 +31,7 @@ export const BorderLine = styled.View`
   height: 2px;
 `;
 
-export const Body = styled.ScrollView`
+export const Body = styled.View`
   margin-left: 32px;
   margin-right: 32px;
   margin-top: 16px;

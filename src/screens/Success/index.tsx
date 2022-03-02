@@ -8,7 +8,6 @@ import { ButtonPush } from '../../components/ButtonPush';
 
 import {
   Container,
-  Title,
   Header,
   BorderLine,
   Footer
@@ -26,9 +25,6 @@ export function Success({
     <Container>
       <Header>
         <Logo />
-        <Title> 
-          Notificações
-        </Title>
       </Header>
       <BorderLine>
         <LinearGradient

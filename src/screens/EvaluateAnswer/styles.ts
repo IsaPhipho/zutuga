@@ -116,8 +116,8 @@ export const IconCard = styled(
 
 export const MessageBox = styled(TextInput)`
   width: 100%;
-  height: 80px;
-  margin-bottom: ${RFValue(16)}px;
+  height: 64px;
+  margin-bottom: ${RFValue(8)}px;
 
   padding: 16px 8px;
 
@@ -132,7 +132,7 @@ export const MessageBox = styled(TextInput)`
 `;
 
 export const MessageText = styled.Text`
-  margin-top: 8px;
+  margin-top: 4px;
   margin-bottom: ${RFValue(8)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(14)}px;
@@ -161,5 +161,11 @@ export const Icon= styled(
   margin-right: 8px;
   margin-top: 4px;
   color: ${({ theme }) => theme.colors.primary.main};
+`;
+
+export const View = styled.View`
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: ${RFValue(16)}px;
 `;
 

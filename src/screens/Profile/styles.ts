@@ -99,3 +99,9 @@ export const InputText = styled.Text`
 
   margin-bottom: ${RFValue(16)}px;
 `;
+
+export const View = styled.View`
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: ${RFValue(16)}px;
+`;

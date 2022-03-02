@@ -70,7 +70,13 @@ export const SecondSectionType = styled.View`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+`;
+
+export const View = styled.View`
+  margin-top: 24px;
+  margin-left: 32px;
+  margin-right: 32px;
 `;
 
 

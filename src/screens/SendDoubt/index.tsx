@@ -29,10 +29,10 @@ import {
   Header,
   BorderLine,
   Body,
-  Content,
   Footer,
   MessageText,
-  MessageBox
+  MessageBox,
+  View
 } from './styles';
 
 export function SendDoubt() {
@@ -104,21 +104,21 @@ export function SendDoubt() {
             closeSuccessMessage={handleCloseSuccessModal}
           />
         </Modal>
-        <Content>
-          <Footer>
-              <MessageText>Digite sua dúvida:</MessageText>
-              <MessageBox />
-              <ButtonPush title="Anexar arquivos (máx. 300KB)"/>
-              <Button 
-                title="Publicar"
-                onPress={handleOpenSuccessModal}
-              />
-              <ButtonPush 
-                title="Voltar"
-                onPress={handleNavigateToHome}
-              />
-            </Footer> 
-          </Content>
+        <Footer>
+          <MessageText>Digite sua dúvida:</MessageText>
+          <MessageBox />
+          <ButtonPush title="Anexar arquivos (máx. 300KB)"/>
+          <Button 
+            title="Publicar"
+            onPress={handleOpenSuccessModal}
+          />
+        </Footer> 
+        <View>
+          <ButtonPush 
+            title="Voltar"
+            onPress={handleNavigateToHome}
+          />
+        </View>
       </Container> 
     </TouchableWithoutFeedback>
   )

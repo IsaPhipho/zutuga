@@ -209,13 +209,13 @@ export function DoubtList() {
             </Text>
           </Footer>
         </Card02>
-        <View>
-          <ButtonPush 
-            title="Voltar"
-            onPress={handleNavigateToHome}
-          />
-        </View>
-      </Content>    
+      </Content> 
+      <View>
+        <ButtonPush 
+          title="Voltar"
+          onPress={handleNavigateToHome}
+        />
+      </View>   
     </Container> 
   )
 }    

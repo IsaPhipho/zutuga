@@ -15,7 +15,7 @@ export function SuccessMessage({...rest} : Props) {
   return (
     <Container {...rest}>  
       <Icon name="check-circle" /> 
-      <Message>Publicação feita com sucesso!</Message>
+      <Message>Ação efetuada com sucesso!</Message>
     </Container>
   );
 }

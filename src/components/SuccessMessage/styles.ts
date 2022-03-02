@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const Container = styled(View)`
   flex-direction: column;
-  margin-top: 136px
+  margin-top: 136px;
   align-items: center;
 `;
 

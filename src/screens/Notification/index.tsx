@@ -24,17 +24,17 @@ import {
 export function Notification() {
   const { navigate }: NavigationProp<ParamListBase> = useNavigation();
 
-  function handleNavigateToLinks() {
-    navigate('Links');
-  }
+  // function handleNavigateToLinks() {
+  //   navigate('Links');
+  // }
 
   function handleNavigateToEvaluateAnswer() {
     navigate('EvaluateAnswer');
   }
 
-  function handleNavigateToTipListp() {
-    navigate('TipList');
-  }
+  // function handleNavigateToTipListp() {
+  //   navigate('TipList');
+  // }
 
   return (
     <Container>
@@ -59,7 +59,7 @@ export function Notification() {
         <Icon name="activity" />
           <ButtonNotification
             title="Foi adicionado o site do Sistema de Saúde na seção Links Úteis!"
-            onPress={handleNavigateToLinks}
+            // onPress={handleNavigateToLinks}
           />
         <Icon name="flag" />  
           <ButtonNotification
@@ -69,7 +69,7 @@ export function Notification() {
         <Icon name="coffee" />  
           <ButtonNotification
             title="Uma nova dica foi enviada para a seção    Dicas!"
-            onPress={handleNavigateToTipListp}
+            // onPress={handleNavigateToTipListp}
           />
       </Body>  
     </Container>  
